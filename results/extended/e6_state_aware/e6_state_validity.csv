@@ -1,0 +1,11 @@
+battery_id,battery,next_fixation_valid_rate,next_part_active_rate,n_next_fixation_checks,n_next_part_checks
+1,Fiat 500e,1.0,1.0,280,94
+2,Chevrolet Spark,1.0,1.0,140,27
+3,Hyundai IONIQ 5,1.0,1.0,275,111
+4,BMW 530e,1.0,1.0,132,25
+5,Chevrolet Volt,1.0,1.0,135,31
+6,Volvo EX30,1.0,1.0,177,33
+7,BMW 330e,1.0,1.0,113,17
+8,MG ZS,1.0,1.0,238,89
+9,Mitsubishi Outlander,1.0,1.0,131,51
+10,BMW i3,1.0,1.0,157,15

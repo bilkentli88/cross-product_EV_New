@@ -1,0 +1,41 @@
+{
+  "experiment": "E8 same-manufacturer exclusion sensitivity analysis",
+  "basis": "Frozen E6 v2 DynamicReal and DynamicShuffled implementation",
+  "independent_unit": "held-out battery product; five affected products",
+  "manufacturer_groups": {
+    "BMW": [
+      "BMW 530e",
+      "BMW 330e",
+      "BMW i3"
+    ],
+    "Chevrolet": [
+      "Chevrolet Spark",
+      "Chevrolet Volt"
+    ]
+  },
+  "conditions": [
+    "dynamic_real",
+    "dynamic_shuffle x5"
+  ],
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "shuffle_ids": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "epochs": 30,
+  "negative_samples_per_state": 8,
+  "learning_rate": 0.002,
+  "weight_decay": 0.0001,
+  "dropout": 0.1,
+  "state_convention": "post-current; operation t is applied before ranking future candidates with t+1 as reference positive",
+  "dynamic_update": "executed fixation removes its fixation edge; executed part marks removal-complete; node deactivation is deferred until no modeled unexecuted incident fixation remains",
+  "primary_e8_contrast": "DynamicReal minus five-shuffle mean on Hits@1",
+  "inference_note": "Sensitivity analysis only. n=5 affected products; minimum possible two-sided exact sign-flip p-value is 0.0625. Effect magnitude and directional consistency are emphasized. Bootstrap intervals are descriptive."
+}

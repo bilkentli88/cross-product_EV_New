@@ -1,0 +1,2 @@
+condition,hits1,hits3,mrr,mean_parameter_count,mean_gnn_parameter_count,max_parameter_gap_percent
+CapacityMatchedMeanPool,0.19690212112863417,0.36691976281248484,0.33316450196465996,45808.4,45731.0,0.24307456476513742

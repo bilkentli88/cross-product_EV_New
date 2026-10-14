@@ -1,0 +1,2 @@
+battery_id,battery,part_operation_position,part_operation_id,part_id,part_class,later_incident_fixation_count,later_incident_fixation_positions,later_incident_fixation_ids
+1,Fiat 500e,79,1079,1002,BMS,2,"80,83","1077,1079"

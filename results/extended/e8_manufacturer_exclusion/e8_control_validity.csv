@@ -1,0 +1,26 @@
+battery_id,battery,manufacturer_group,shuffle_id,operation_local_inputs_identical,dynamic_fraction_sequence_identical,exact_block_graph_isomorphism,degree_permutation_valid,edge_types_identical
+4,BMW 530e,BMW,1,True,True,True,True,True
+4,BMW 530e,BMW,2,True,True,True,True,True
+4,BMW 530e,BMW,3,True,True,True,True,True
+4,BMW 530e,BMW,4,True,True,True,True,True
+4,BMW 530e,BMW,5,True,True,True,True,True
+7,BMW 330e,BMW,1,True,True,True,True,True
+7,BMW 330e,BMW,2,True,True,True,True,True
+7,BMW 330e,BMW,3,True,True,True,True,True
+7,BMW 330e,BMW,4,True,True,True,True,True
+7,BMW 330e,BMW,5,True,True,True,True,True
+10,BMW i3,BMW,1,True,True,True,True,True
+10,BMW i3,BMW,2,True,True,True,True,True
+10,BMW i3,BMW,3,True,True,True,True,True
+10,BMW i3,BMW,4,True,True,True,True,True
+10,BMW i3,BMW,5,True,True,True,True,True
+2,Chevrolet Spark,Chevrolet,1,True,True,True,True,True
+2,Chevrolet Spark,Chevrolet,2,True,True,True,True,True
+2,Chevrolet Spark,Chevrolet,3,True,True,True,True,True
+2,Chevrolet Spark,Chevrolet,4,True,True,True,True,True
+2,Chevrolet Spark,Chevrolet,5,True,True,True,True,True
+5,Chevrolet Volt,Chevrolet,1,True,True,True,True,True
+5,Chevrolet Volt,Chevrolet,2,True,True,True,True,True
+5,Chevrolet Volt,Chevrolet,3,True,True,True,True,True
+5,Chevrolet Volt,Chevrolet,4,True,True,True,True,True
+5,Chevrolet Volt,Chevrolet,5,True,True,True,True,True

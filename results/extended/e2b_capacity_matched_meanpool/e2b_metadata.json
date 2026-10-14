@@ -1,0 +1,16 @@
+{
+  "experiment": "E2b capacity-matched mean-pool global-context control",
+  "context_width": 85,
+  "independent_unit": "held-out battery product (n=10)",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "epochs": 30,
+  "negative_samples_per_state": 8,
+  "learning_rate": 0.002,
+  "weight_decay": 0.0001,
+  "dropout": 0.1,
+  "notes": "No adjacency and no graph-branch physical degree are used. Only the global-context branch width is increased to 85 to match the canonical GNN parameter count within 0.30% in every LOPO fold."
+}

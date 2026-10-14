@@ -1,0 +1,25 @@
+{
+  "experiment": "E1 test-time topology swap",
+  "training_fits": 180,
+  "neural_training_seeds": [
+    17,
+    29,
+    43
+  ],
+  "permutation_ids": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "epochs": 30,
+  "negatives_per_state": 8,
+  "learning_rate": 0.002,
+  "weight_decay": 0.0001,
+  "dropout": 0.1,
+  "bootstrap_replicates": 20000,
+  "primary_e1_endpoint": "Hits@1",
+  "independent_unit": "held-out battery product (n=10)",
+  "notes": "Canonical models are reproduced because the original experiment did not persist checkpoints. Graph swaps are performed only after training. Hits@1 contrasts A-C use exact paired sign-flip tests with Holm adjustment."
+}

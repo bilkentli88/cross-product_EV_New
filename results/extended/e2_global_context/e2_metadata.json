@@ -1,0 +1,31 @@
+{
+  "experiment": "E2 global-context and structure-preserving controls",
+  "independent_unit": "held-out battery product (n=10)",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "shuffle_ids": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "rewire_ids": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "run_original_permutations": true,
+  "epochs": 30,
+  "negative_samples_per_state": 8,
+  "learning_rate": 0.002,
+  "weight_decay": 0.0001,
+  "bootstrap_replicates": 20000,
+  "primary_endpoint": "Hits@1",
+  "notes": "MeanPool uses no adjacency and zero graph-branch degree. CompleteGraph uses all-to-all edges with a single dummy edge type. Class-preserving rewiring preserves node degree, fixation edge type, and endpoint component-class pairs while changing exact adjacency."
+}

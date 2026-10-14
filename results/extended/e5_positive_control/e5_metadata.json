@@ -1,0 +1,30 @@
+{
+  "experiment": "E5 positive-control topology-determined ranking benchmark",
+  "independent_unit": "held-out battery product (n=10)",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "shuffle_ids": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "epochs": 30,
+  "negative_samples_per_state": 8,
+  "learning_rate": 0.002,
+  "weight_decay": 0.0001,
+  "dropout": 0.1,
+  "hidden_rule": {
+    "first_order": "mean over true neighbors of 0.65*neighbor_part_frequency_rank_weight + 0.25*fixation_frequency_rank_weight + 0.10*neighbor_true_normalized_degree",
+    "second_order": "mean first-order score of true physical neighbors",
+    "node_score": "0.75*first_order + 0.25*second_order",
+    "fixation_operation_score": "0.5*(endpoint_a + endpoint_b) + 0.10*abs(endpoint_a-endpoint_b)",
+    "part_operation_score": "referenced node score",
+    "tie_break": "training-only semantic frequency-rank score; used only for rounded topology-score ties"
+  },
+  "notes": "Synthetic target labels are always generated from the recorded true physical graph. The original empirical next-operation labels are not used for E5 training."
+}

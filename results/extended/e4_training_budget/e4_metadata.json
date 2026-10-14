@@ -1,0 +1,33 @@
+{
+  "experiment": "E4 training-budget and convergence sensitivity",
+  "independent_unit": "held-out battery product (n=10)",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "shuffle_ids": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "evaluation_epochs": [
+    30,
+    100,
+    300
+  ],
+  "max_epochs": 300,
+  "negative_samples_per_state": 8,
+  "learning_rate": 0.002,
+  "weight_decay": 0.0001,
+  "dropout": 0.1,
+  "conditions": [
+    "real",
+    "noedge",
+    "complete",
+    "shuffle_mean"
+  ],
+  "notes": "Each model follows one continuous trajectory from epoch 1 through 300. Metrics are read at fixed epochs 30, 100, and 300; checkpoints are not selected using held-out performance."
+}

@@ -1,0 +1,4 @@
+metric,designated_primary_e8_endpoint,n_products,mean_difference_real_minus_shuffle,ci_low_descriptive,ci_high_descriptive,positive_products,negative_products,zero_products,p_exact_two_sided
+hits1,True,5,0.07826839599529052,0.03504726217090094,0.12357136821798924,5,0,0,0.0625
+hits3,False,5,0.07395899093230589,0.023317354368078403,0.13088346982609547,4,1,0,0.125
+mrr,False,5,0.06734748143479141,0.030450929888222157,0.11272311555384414,5,0,0,0.0625

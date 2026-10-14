@@ -1,0 +1,31 @@
+{
+  "experiment": "E6 dynamic state-aware topology under strict LOPO",
+  "independent_unit": "held-out battery product (n=10)",
+  "state_convention": "post-current: operation t is applied before ranking future candidates with t+1 as reference positive",
+  "dynamic_update": "executed fixation removes its fixation edge; executed part marks its node removal-complete; the node is deactivated only after no unexecuted modeled fixation remains incident",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "shuffle_ids": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "epochs": 30,
+  "negative_samples_per_state": 8,
+  "learning_rate": 0.002,
+  "weight_decay": 0.0001,
+  "dropout": 0.1,
+  "conditions": [
+    "static_real",
+    "dynamic_real",
+    "dynamic_noedge",
+    "dynamic_complete",
+    "dynamic_shuffle_mean"
+  ],
+  "notes": "Dynamic shuffled graphs transform both the initial topology and every later structural event through the same fixed node permutation, preserving the unlabeled dynamic graph sequence while breaking semantic-topological alignment. Operation-local categorical and original true-degree features are identical across all conditions."
+}

@@ -1,0 +1,2 @@
+contrast,mean_difference,descriptive_ci_low,descriptive_ci_high,positive_products,negative_products,zero_products,p_exact_two_sided,multiplicity_family
+DynamicReal - StateAwareXGBRanker,-0.03222159291838324,-0.05259454751100301,-0.011030239916112117,2,8,0,0.021484375,separate additional prespecified Hits@1 contrast

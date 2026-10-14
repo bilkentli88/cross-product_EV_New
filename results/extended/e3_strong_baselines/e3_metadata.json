@@ -1,0 +1,27 @@
+{
+  "experiment": "E3 strong non-graph ranking baseline and interpretable heuristics",
+  "independent_unit": "held-out battery product (n=10)",
+  "xgb_seeds": [
+    17,
+    29,
+    43
+  ],
+  "xgb_params": {
+    "objective": "rank:pairwise",
+    "eval_metric": "ndcg@3",
+    "n_estimators": 250,
+    "max_depth": 6,
+    "learning_rate": 0.05,
+    "min_child_weight": 1.0,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "reg_lambda": 1.0,
+    "reg_alpha": 0.0,
+    "tree_method": "hist",
+    "n_jobs": -1,
+    "device": "cuda"
+  },
+  "transition_prior_alpha": 5.0,
+  "primary_endpoint": "Hits@1",
+  "notes": "XGBRanker uses all remaining candidates in every training ranking group and only non-adjacency operation features. GraphDistance and SharedComponent are deterministic held-out physical-graph heuristics. UniformRandom is analytical."
+}
