@@ -1,0 +1,172 @@
+dataset:
+  doi: "10.35097/emz24pksshndq468"
+  products: 10
+  evaluation: "leave-one-product-out"
+  independent_unit: "held-out battery product"
+
+training:
+  seeds: [17, 29, 43]
+  canonical_epochs: 30
+  optimizer: "AdamW"
+  learning_rate: 0.002
+  weight_decay: 0.0001
+  dropout: 0.10
+  negatives_per_state: 8
+  base_seed: 20261003
+  early_stopping: false
+
+representation:
+  categorical_embedding_dim: 12
+  operation_input_dim: 67
+  operation_hidden_dim: 64
+  primary_pair_representation_dim: 257
+  includes_normalized_sequence_progress: true
+  capacity_matched_mlp_width: 88
+  gnn_hidden_dim: 32
+  edge_type_embedding_dim: 8
+  message_passing_layers: 2
+
+static_topology_controls:
+  permutation_ids: [1, 2, 3, 4, 5]
+  graph_shuffle_base: 20261119
+  seed_formula: "20261119 + 10007 * permutation_id + battery_id"
+  historical_code_label: "shuffle / ShuffledGNN"
+  manuscript_label: "semantic-topology permutation / permuted-topology GNN"
+  no_edge_graph_degree: 0
+  retain_operation_local_true_degree_features: true
+
+state_aware:
+  state_timing: "post-current-operation"
+  fixed_node_index_set: true
+  remove_executed_fixation_edges: true
+  mark_part_operation_complete: true
+  deactivation_rule: "deactivate completed node only when no remaining active incident modeled fixation exists"
+  retain_inactive_nodes_as_isolated_semantic_nodes: true
+  dynamic_shuffle_uses_fixed_permutation_across_all_state_updates: true
+  operation_local_inputs_identical_across_e6_conditions: true
+  block_diagonal_state_batching: true
+
+experiments:
+  canonical_static:
+    conditions:
+      - AttributeMLP
+      - CapacityMatchedMLP
+      - RealGNN
+      - NoEdgesGNN
+      - PermutedGNN_x5
+    epochs: 30
+  e1_test_time_topology_swap:
+    retraining: false_for_real_trained_forward_swap_and_existing_permutation_models_for_reverse_swap
+    designated_hits1_contrasts:
+      - "real-trained real-test minus permutation-test mean"
+      - "real-trained real-test minus no-edge test"
+      - "permutation-trained matched-permutation test minus real test"
+  e2_global_context:
+    conditions:
+      - RealGNN
+      - NoEdgesGNN
+      - PermutedGNN_x5
+      - MeanPoolContext
+      - CompleteGraphGNN
+      - ClassPreservingRewiredGNN_x5
+  e2b_capacity_matched_meanpool:
+    context_width: 85
+    target_parameter_gap_percent_max: 0.3
+  e3_strong_baselines:
+    methods:
+      - XGBRanker
+      - ClassTransitionPrior
+      - GraphDistance
+      - SharedComponent
+      - UniformRandom
+    xgboost:
+      objective: "rank:pairwise"
+      n_estimators: 250
+      max_depth: 6
+      learning_rate: 0.05
+      min_child_weight: 1
+      subsample: 0.90
+      colsample_bytree: 0.90
+      reg_lambda: 1.0
+      reg_alpha: 0.0
+      tree_method: "hist"
+  e4_training_budget:
+    epochs: [30, 100, 300]
+    conditions:
+      - RealGNN
+      - NoEdgesGNN
+      - CompleteGraphGNN
+      - PermutedGNN_x5
+  e5_positive_control:
+    diagnostic_only: true
+    conditions:
+      - RealGNN
+      - NoEdgesGNN
+      - CompleteGraphGNN
+      - PermutedGNN_x5
+    designated_hits1_contrasts:
+      - "real minus permuted mean"
+      - "real minus no-edge"
+      - "real minus complete"
+  e6_state_aware:
+    conditions:
+      - DynamicReal
+      - DynamicShuffled_x5
+      - StaticReal_matched_rerun
+      - DynamicComplete
+      - DynamicNoEdge
+    epochs: 30
+    total_neural_fits: 270
+    designated_hits1_contrasts:
+      - "DynamicReal minus DynamicShuffled mean"
+      - "DynamicReal minus StaticReal"
+      - "DynamicReal minus DynamicComplete"
+      - "DynamicReal minus DynamicNoEdge"
+  e9_stateaware_xgb:
+    label: "complementary state-aware non-GNN comparator"
+    notebook: "notebooks/E9_StateAwareXGBRanker_LOPO.ipynb"
+    model: "XGBRanker"
+    seeds: [17, 29, 43]
+    state_timing: "post-current-operation, E6 deferred deactivation"
+    training_candidates: "complete nonterminal remaining set"
+    evaluation: "all remaining candidates; include terminal singleton"
+    contrast: "DynamicReal minus StateAwareXGBRanker"
+    multiplicity: "separate from four E6 Holm contrasts"
+    source_run_device: "CUDA (from saved metadata)"
+  e8_same_manufacturer_exclusion:
+    affected_products: 5
+    conditions:
+      - DynamicReal
+      - DynamicShuffled_x5
+    total_neural_fits: 90
+    descriptive_due_to_n5: true
+
+sensitivity:
+  terminal_singleton:
+    enabled: true
+    retraining_required: false
+  no_progress:
+    enabled: true
+    remove_normalized_sequence_progress: true
+    pair_representation_dim: 256
+    capacity_matched_mlp_width: 88
+  no_degree:
+    enabled: true
+    remove_operation_local_normalized_degree_features: true
+
+statistics:
+  primary_endpoint: "Hits@1"
+  supporting_endpoints: ["Hits@3", "MRR"]
+  bootstrap_replicates: 20000
+  bootstrap_interpretation: "descriptive product-level interval"
+  exact_test: "two-sided paired sign-flip"
+  exact_sign_assignments_n10: 1024
+  multiplicity: "Holm within designated Hits@1 family for each principal controlled experiment"
+  seeds_and_graph_realizations_are_not_independent_units: true
+
+evaluation:
+  tie_tolerance: 1.0e-8
+  tie_handling: "expected metric under uniform ordering within tied group"
+  random_baseline: "analytical uniform ranking over state-specific candidate sets"
+  target: "recorded reference next operation"
+  scope: "reference ranking, not exhaustive physical feasibility or closed-loop planning"
