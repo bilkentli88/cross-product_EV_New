@@ -1,22 +1,12 @@
 # Physical Topology and Process State in Cross-Product EV Battery Disassembly Ranking
 
-Reproducibility materials for **Physical Topology and Process State in Cross-Product EV Battery Disassembly Ranking: A Controlled Representation Audit**, prepared for *Computers in Industry*.
+Code, experiment configurations, saved results, and verification scripts accompanying **Physical Topology and Process State in Cross-Product EV Battery Disassembly Ranking: A Controlled Representation Audit**.
 
-## Main findings
+The study evaluates next-operation ranking across ten EV battery products using leave-one-product-out evaluation. It compares state-aware non-graph learners, feature-update controls, and graph-adjacency controls. Evaluation uses the recorded operation prefix and an unordered inventory of remaining operations; the target is the recorded successor. The reported metrics measure reference-operation ranking rather than physical feasibility or planning success.
 
-This repository distinguishes explicit engineering-state summaries from graph message passing in teacher-forced reference next-operation ranking for ten EV battery products. An unordered remaining-operation inventory is supplied; the executed recorded prefix defines the current state. These are reference-ranking scores, not planning-success or physical-feasibility rates.
+## Verify the reported results
 
-| Principal study | Question | Equally weighted product mean Hits@1 |
-|---|---|---|
-| E9 | State-aware learners and their initial-state feature controls | MLP **41.49%**, XGB **43.27%**, matched dynamic GNN **38.81%**; initial-state MLP **35.96%**, XGB **37.98%** |
-| E10 | Which fixed-schema feature updates carry the improvement? | GlobalStructure MLP **41.12%**, XGB **43.34%**; Full MLP **41.49%**, XGB **43.27%** |
-| E11 | Adjacency conditional on retained physical degree and semantic inputs | Real **38.54%**, five-realization ActiveShuffle **33.38%**, NoEdge **31.11%** |
-
-E9's state-aware scalar pipelines exceed the tested GNN. E10 locates most improvement in jointly updated degree/type and global summaries; it does not separate degree and fixation-type contributions. E11 finds additional predictive value for correctly aligned messages within the tested GNN. Shuffled computational degrees can disagree with retained physical degree covariates, so E11 is a conditional correspondence test, not an isolated causal topology effect or evidence of general GNN superiority.
-
-Products (n=10) are the comparison units. Seeds and realizations are averaged within product. Sign-flip tests assume product-level sign exchangeability; shared manufacturers and overlapping training folds limit population inference. Separate Holm families cover four E9, six E10, and two E11 Hits@1 tests. Bootstrap intervals are descriptive. E10 was selected after E9; internal prospective protocol locks are not external preregistration.
-
-## Quick verification: no dataset, GPU, or retraining needed
+Run these commands from the repository root with Python 3.10 or newer:
 
 ```bash
 python -m pip install -r requirements.txt
@@ -26,49 +16,79 @@ python scripts/verify_state_records.py
 python scripts/regenerate_figures.py
 ```
 
-These commands check packaged file provenance, recompute saved fit/product aggregates and primary exact/Holm tests, verify all 660 per-fit state-metric records, and regenerate the two result plots into `generated_figures/`. They do not train models or prove dataset-level physical validity. See [reproduction instructions](docs/reproducibility.md) and [the validation report](docs/VALIDATION_REPORT.md) for the checks actually run on this package.
+| Command | Purpose |
+|---|---|
+| `verify_repository.py` | Check file hashes, notebook structure, Python syntax, and documentation links. |
+| `verify_saved_statistics.py` | Recompute product-level aggregates, designated exact sign-flip tests, Holm-adjusted p-values, and descriptive bootstrap intervals. |
+| `verify_state_records.py` | Reconstruct all 660 fit-record means from saved per-state metrics and check identifiers, protocol signatures, available checksums, and reused-record provenance. |
+| `regenerate_figures.py` | Regenerate the two result plots in `generated_figures/`. |
 
-## Final experiment notebooks
+This workflow requires no raw dataset, GPU, or model training. It verifies the supplied numerical records; it does not regenerate raw-data features or re-evaluate model checkpoints. See the [validation report](docs/VALIDATION_REPORT.md) for the verification scope.
 
-| Study | Notebook | Recorded study provenance |
+## Analyses and source files
+
+| Analysis | Notebook | Saved results |
 |---|---|---|
-| E9 | [State-aware baselines](notebooks/E9_State_Aware_Baselines.ipynb) | 150 fits |
-| E10 | [State-feature families](notebooks/E10_State_Feature_Families.ipynb) | 300 records: 120 verified E9 endpoints plus 180 new fits |
-| E11 | [Canonical-degree adjacency](notebooks/E11_Canonical_Degree_Adjacency.ipynb) | All 210 fits trained afresh after the all-or-none E9 reference gate failed |
+| State-aware MLP and XGBoost baselines, initial-state controls, and matched GNN comparison | [State-aware baselines](notebooks/E9_State_Aware_Baselines.ipynb) | [Baseline records](results/principal/e9/) |
+| Controlled updates of global, status, and structural feature families | [Feature-family controls](notebooks/E10_State_Feature_Families.ipynb) | [Feature-family records](results/principal/e10/) |
+| Real, active-shuffled, and no-edge adjacency with retained physical-degree and semantic inputs | [Adjacency controls](notebooks/E11_Canonical_Degree_Adjacency.ipynb) | [Adjacency records](results/principal/e11/) |
 
-These self-contained notebooks preserve their delivered executable code and bytes. Their setup defaults are **full training enabled for E9 and E11**, and **disabled for E10** until enabled in its full-run cell. Read the notebook settings before execution. Summary verification above is the fast inspection route. Notebook introductions describe their original preparation stage; the saved completion records and current README document the completed study.
+Experiment identifiers in filenames provide stable links between notebooks, protocols, and exported records. The baseline comparison and adjacency control use separately trained GNN references; use the reference scores from the corresponding analysis.
 
-## Repository contents
+The collections contain 150 baseline records, 300 feature-family records, and 210 adjacency-control records. The feature-family collection includes 120 verified baseline endpoints and 180 newly trained fits; reused endpoints are not independent replications. The adjacency collection contains 30 real-adjacency, 150 shuffled-adjacency, and 30 no-edge fits.
 
-- `notebooks/`: the three final self-contained notebooks.
-- `results/principal/e9`, `e10`, `e11`: saved protocols, every fit JSON and per-state metric CSV, diagnostics, and final summaries. Model weights are in the separate original exports.
-- `results/audits/`: retained numerical audit and CPU sensitivity records.
-- `notebooks/historical/`, `results/historical/`, `scripts/historical/`: earlier supporting experiments, kept separate from the principal protocols.
-- `configs/`: current protocol summary, recorded software environments, and separately labelled historical settings.
-- `provenance/`: original source archive hashes, notebook provenance, and packaged-file integrity manifest.
-- `scripts/`: verification and figure-regeneration commands.
-- `docs/`: reproduction, provenance, code-availability, and publishing instructions.
+## Dataset and model training
 
-**Historical naming collision:** `notebooks/historical/E9_StateAwareXGBRanker_LOPO.ipynb` is the older XGB-only comparator (approximately 42.3% Hits@1), corresponding to Supplementary Section S11.1. It is not the final principal E9 (XGB 43.27%, MLP 41.49%). Earlier static and E6 graph perturbations also change degree/state context and must not be substituted for E11.
+Obtain the EV battery disassembly dataset from Karlsruhe Institute of Technology:
 
-## Dataset and software
+**<https://doi.org/10.35097/emz24pksshndq468>**
 
-The external KIT dataset is available at <https://doi.org/10.35097/emz24pksshndq468>. It is not redistributed here. [Dataset instructions](data/README.md) list the four original CSV names and their SHA-256 hashes. Principal saved protocols record PyTorch 2.11.0+cu130 and NumPy 2.1.3; E9/E10 also record XGBoost 3.4.1 and scikit-learn 1.6.1. [Recorded environments](configs/recorded_environments.json) describe the original runs; `requirements-training.txt` is an installation convenience, not a guarantee of identical numerical output on every device or package version. Do not replace a working Colab PyTorch installation just to inspect saved CSVs.
+The dataset is distributed by its publisher and is not included here. [Dataset instructions](data/README.md) identify the four required CSV files and their SHA-256 hashes.
 
-## Original exports and checkpoints
+The notebooks support Google Colab. Run their numbered cells in order and set the dataset and output paths. A GPU is recommended for neural training.
 
-The separate accompanying **EV_Final_Experiment_Exports.zip** contains four unchanged original archives: E9 exports, E10 original fit exports, separately verified E10 summaries, and E11 exports. It includes model checkpoints and full original state/fit/diagnostic exports. Archive hashes are listed in [source_archives.json](provenance/source_archives.json).
+- The baseline notebook enables full training by default.
+- The feature-family notebook requires enabling its full-run cell. Its reference-reuse mode requires the baseline export; a fresh-training mode is also documented.
+- The adjacency notebook enables full training by default and supports fresh training without supplied reference checkpoints.
 
-For public distribution, attach this large companion ZIP to a GitHub Release and link its actual published asset URL from the release/README. It is intentionally outside the small source ZIP. Until that upload is completed, do not describe the checkpoint archive as publicly hosted on GitHub. Source code and saved-state numerical checks are available from this repository alone once its cleaned contents are uploaded.
+For Colab, use the notebook setup cells. For local execution, install `requirements-training.txt` and adapt Colab-specific Drive mounting and paths. Follow the [detailed reproduction instructions](docs/reproducibility.md) for the analysis-specific settings.
+
+[Recorded software environments](configs/recorded_environments.json) list the package versions captured in the reported runs. Training requirements provide dependency ranges rather than an exact environment lock; numerical outputs may vary with software and hardware. Saved protocols in each results directory specify the corresponding experimental settings.
+
+## Evaluation and statistical analysis
+
+Neural-training seeds are 17, 29, and 43. Results are averaged across training seeds and, where applicable, five shuffle realizations within each product, then averaged with equal weight across the ten held-out products.
+
+The designated Hits@1 comparisons use exact two-sided product-level sign-flip tests over all 1,024 sign assignments. Holm correction is applied separately to the four baseline, six feature-family, and two adjacency comparisons. Descriptive bootstrap intervals use 10,000 product resamples with seed 20261003. Protocol files and the [reproduction instructions](docs/reproducibility.md) specify randomization settings, comparisons, and interpretation limits, including overlapping training folds and the sign-exchangeability assumption.
+
+## Checkpoints and original exports
+
+The source tree contains protocols, fit summaries, per-state ranking metrics, diagnostics, and analysis scripts. Model weights are supplied separately in the companion **`EV_Final_Experiment_Exports.zip`**, containing the original experiment exports and verified feature-family summaries. See [Releases](https://github.com/bilkentli88/cross-product_EV_New/releases) for published download assets.
+
+After obtaining the companion archive, verify it with:
 
 ```bash
 python scripts/verify_original_exports.py /path/to/EV_Final_Experiment_Exports.zip
 ```
 
-This checks archive identities and the original saved model/state checksums without loading checkpoints or retraining. See [publishing instructions](docs/PUBLISHING.md).
+This checks archive identities, integrity, and available saved model/state checksums without loading model weights. Archive hashes are recorded in [the source manifest](provenance/source_archives.json). Original exports contain per-state ranking metrics; per-candidate GPU score vectors were not exported.
 
-## Historical results and license
+## Repository guide
 
-Historical CSV summaries and notebooks are preserved from the supplied repository. Historical verification scripts recompute/check saved outputs; they do not reconstruct every original E1–E8 checkpoint or constitute a new full training replication. See [provenance](docs/PROVENANCE.md).
+| Location | Contents |
+|---|---|
+| `notebooks/` | Notebooks for the three principal analyses. |
+| `results/principal/` | Protocols, fit records, per-state metrics, diagnostics, and aggregate results. |
+| `results/audits/` | Numerical checks and CPU sensitivity records. |
+| `configs/` | Protocol summary and recorded software environments. |
+| `scripts/` | Integrity checks, statistical verification, and figure generation. |
+| `provenance/` | Source hashes and file-integrity records. |
+| `figures/published/` | Supplied result figures. |
+| `data/` | Dataset retrieval and integrity instructions. |
+| `docs/` | Detailed reproduction instructions and validation documentation. |
 
-Repository code retains the MIT license. The KIT dataset remains subject to its publisher's terms. Funding: none. The author reports no competing interests. AI assistance and the distinction between source assistance and executable measurements are described in the article and [provenance notes](docs/PROVENANCE.md).
+Additional supporting notebooks, results, and scripts are retained in the `historical/` subdirectories. Their relationship to the principal analyses and supplementary results is documented in the [provenance guide](docs/PROVENANCE.md).
+
+## Citation and license
+
+Repository citation metadata are provided in [CITATION.cff](CITATION.cff). Code is distributed under the [MIT license](LICENSE). The external dataset remains subject to its publisher's terms.
