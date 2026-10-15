@@ -1,0 +1,19 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 2,
+  "battery": "Chevrolet Spark",
+  "seed": 17,
+  "condition": "GlobalStatusXGB",
+  "variant": "GlobalStatus",
+  "n_states": 167,
+  "hits1": 0.42279165923570433,
+  "hits3": 0.6957701872879513,
+  "mrr": 0.5803331915244372,
+  "training_rows": 286900,
+  "feature_count": 345,
+  "runtime_seconds": 31.863303899765015,
+  "device": "cuda",
+  "origin": "New E10 training",
+  "model_sha256": "640456a4ce4474fe63f8dbfd591d2134131d872366d7f198c81274771c18340c",
+  "states_sha256": "b090af494c4f41b2b481ea0f410bd44b215b898693dbdf7fa7e8fb67edc279d1"
+}

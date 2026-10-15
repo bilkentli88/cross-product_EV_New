@@ -1,0 +1,149 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 10,
+  "battery": "BMW i3",
+  "seed": 29,
+  "condition": "FullMLP",
+  "variant": "Full",
+  "n_states": 172,
+  "hits1": 0.41465663861350677,
+  "hits3": 0.6058885204916831,
+  "mrr": 0.5400045495027107,
+  "device": "cuda",
+  "width": 85,
+  "parameter_count": 46133,
+  "gnn_parameter_count": 45761,
+  "capacity_gap_fraction": 0.00812919298092262,
+  "loss_curve": [
+    {
+      "epoch": 1,
+      "loss": 0.623414523071713
+    },
+    {
+      "epoch": 2,
+      "loss": 0.4045170346895854
+    },
+    {
+      "epoch": 3,
+      "loss": 0.3098910003900528
+    },
+    {
+      "epoch": 4,
+      "loss": 0.2500449021657308
+    },
+    {
+      "epoch": 5,
+      "loss": 0.20457146399550968
+    },
+    {
+      "epoch": 6,
+      "loss": 0.17878422968917423
+    },
+    {
+      "epoch": 7,
+      "loss": 0.15850852098729876
+    },
+    {
+      "epoch": 8,
+      "loss": 0.15210354907645118
+    },
+    {
+      "epoch": 9,
+      "loss": 0.13724306225776672
+    },
+    {
+      "epoch": 10,
+      "loss": 0.12884951796796587
+    },
+    {
+      "epoch": 11,
+      "loss": 0.12001457479265001
+    },
+    {
+      "epoch": 12,
+      "loss": 0.11679546121093962
+    },
+    {
+      "epoch": 13,
+      "loss": 0.11412314822276433
+    },
+    {
+      "epoch": 14,
+      "loss": 0.11532520751158397
+    },
+    {
+      "epoch": 15,
+      "loss": 0.10769540071487427
+    },
+    {
+      "epoch": 16,
+      "loss": 0.10986442781156963
+    },
+    {
+      "epoch": 17,
+      "loss": 0.100010946393013
+    },
+    {
+      "epoch": 18,
+      "loss": 0.10273832662238015
+    },
+    {
+      "epoch": 19,
+      "loss": 0.10447812411520216
+    },
+    {
+      "epoch": 20,
+      "loss": 0.10383536749415928
+    },
+    {
+      "epoch": 21,
+      "loss": 0.09553343637122048
+    },
+    {
+      "epoch": 22,
+      "loss": 0.10225665238168505
+    },
+    {
+      "epoch": 23,
+      "loss": 0.09273451897833082
+    },
+    {
+      "epoch": 24,
+      "loss": 0.10088388787375556
+    },
+    {
+      "epoch": 25,
+      "loss": 0.0917462408542633
+    },
+    {
+      "epoch": 26,
+      "loss": 0.09508130037122303
+    },
+    {
+      "epoch": 27,
+      "loss": 0.09219345119264391
+    },
+    {
+      "epoch": 28,
+      "loss": 0.08965406401289834
+    },
+    {
+      "epoch": 29,
+      "loss": 0.09011642386515935
+    },
+    {
+      "epoch": 30,
+      "loss": 0.09075156847635905
+    }
+  ],
+  "e9_training_runtime_seconds": 5.19255256652832,
+  "origin": "Verified E9 anchor; no new training",
+  "e9_provenance": {
+    "record_sha256": "2a777ab7a71ee5d4174e1addd7ab60d858300e8876ee7c095275e2955d21a52c",
+    "states_sha256": "c0f00e4c92aaa203e1280a234a4ea51570aaadca319f214acb915cb355c2d38c",
+    "model_sha256": "e51da801bfb4b0e9f8e4941135aabcf37d47aaf3a0818d5f11a2d286fbf34617",
+    "original_condition": "StateAwareMLP"
+  },
+  "model_sha256": "e51da801bfb4b0e9f8e4941135aabcf37d47aaf3a0818d5f11a2d286fbf34617",
+  "states_sha256": "365e07d4e148cb272277664237566be50e8ea98ab5cd17cb2eb8cc2769269a69"
+}

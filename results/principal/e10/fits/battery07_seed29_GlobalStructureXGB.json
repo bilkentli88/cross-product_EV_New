@@ -1,0 +1,19 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 7,
+  "battery": "BMW 330e",
+  "seed": 29,
+  "condition": "GlobalStructureXGB",
+  "variant": "GlobalStructure",
+  "n_states": 130,
+  "hits1": 0.4105064971249074,
+  "hits3": 0.6007502606054914,
+  "mrr": 0.5400980620320628,
+  "training_rows": 292413,
+  "feature_count": 351,
+  "runtime_seconds": 32.406742095947266,
+  "device": "cuda",
+  "origin": "New E10 training",
+  "model_sha256": "9895cdceefcf5a71fbe2da05276afb1094b2c69fa1bf327c214486f5091e826a",
+  "states_sha256": "b62d9a99bd109842551c3083726dbd5395e53f89036ec68d8973f1d4d4844382"
+}

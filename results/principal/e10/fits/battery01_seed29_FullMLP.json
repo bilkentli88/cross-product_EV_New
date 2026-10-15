@@ -1,0 +1,149 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 1,
+  "battery": "Fiat 500e",
+  "seed": 29,
+  "condition": "FullMLP",
+  "variant": "Full",
+  "n_states": 374,
+  "hits1": 0.41981945690218625,
+  "hits3": 0.598068739096339,
+  "mrr": 0.5333643984478632,
+  "device": "cuda",
+  "width": 85,
+  "parameter_count": 46121,
+  "gnn_parameter_count": 45737,
+  "capacity_gap_fraction": 0.008395828322802107,
+  "loss_curve": [
+    {
+      "epoch": 1,
+      "loss": 0.6185479362805685
+    },
+    {
+      "epoch": 2,
+      "loss": 0.3898809783988529
+    },
+    {
+      "epoch": 3,
+      "loss": 0.286359245578448
+    },
+    {
+      "epoch": 4,
+      "loss": 0.24002409974733988
+    },
+    {
+      "epoch": 5,
+      "loss": 0.2043938289086024
+    },
+    {
+      "epoch": 6,
+      "loss": 0.1772015541791916
+    },
+    {
+      "epoch": 7,
+      "loss": 0.16666365332073635
+    },
+    {
+      "epoch": 8,
+      "loss": 0.15214762505557802
+    },
+    {
+      "epoch": 9,
+      "loss": 0.14851082281933892
+    },
+    {
+      "epoch": 10,
+      "loss": 0.13697217735979292
+    },
+    {
+      "epoch": 11,
+      "loss": 0.13441675653060278
+    },
+    {
+      "epoch": 12,
+      "loss": 0.12563026034169728
+    },
+    {
+      "epoch": 13,
+      "loss": 0.12090688198804855
+    },
+    {
+      "epoch": 14,
+      "loss": 0.10918162928687201
+    },
+    {
+      "epoch": 15,
+      "loss": 0.11486692064338261
+    },
+    {
+      "epoch": 16,
+      "loss": 0.10788853300942315
+    },
+    {
+      "epoch": 17,
+      "loss": 0.10622159971131219
+    },
+    {
+      "epoch": 18,
+      "loss": 0.10267519536945555
+    },
+    {
+      "epoch": 19,
+      "loss": 0.10871571550766627
+    },
+    {
+      "epoch": 20,
+      "loss": 0.09855864197015762
+    },
+    {
+      "epoch": 21,
+      "loss": 0.1025508807765113
+    },
+    {
+      "epoch": 22,
+      "loss": 0.10102949291467667
+    },
+    {
+      "epoch": 23,
+      "loss": 0.10931974649429321
+    },
+    {
+      "epoch": 24,
+      "loss": 0.11896124730507533
+    },
+    {
+      "epoch": 25,
+      "loss": 0.10141367713610332
+    },
+    {
+      "epoch": 26,
+      "loss": 0.10394886632760365
+    },
+    {
+      "epoch": 27,
+      "loss": 0.10207839475737678
+    },
+    {
+      "epoch": 28,
+      "loss": 0.09343951609399584
+    },
+    {
+      "epoch": 29,
+      "loss": 0.10307359364297655
+    },
+    {
+      "epoch": 30,
+      "loss": 0.10367938958936268
+    }
+  ],
+  "e9_training_runtime_seconds": 6.560076713562012,
+  "origin": "Verified E9 anchor; no new training",
+  "e9_provenance": {
+    "record_sha256": "a8510f40fc53e137aeaa00324d6cddb2aadff9abe4d0674e62519cfd197e4ded",
+    "states_sha256": "a71cbaefb63c27cd4179d22f719ab7e9bb24fa4a65fc2af486502d54a50ed3b9",
+    "model_sha256": "df832e14c75603a3ba3428e58246676090d5fca0da6e8c1556dbd4231dc8ec91",
+    "original_condition": "StateAwareMLP"
+  },
+  "model_sha256": "df832e14c75603a3ba3428e58246676090d5fca0da6e8c1556dbd4231dc8ec91",
+  "states_sha256": "676378efd29f4710e59ebdd01ba0b950ec07e3d464bc6eb26d5e7b856371daff"
+}

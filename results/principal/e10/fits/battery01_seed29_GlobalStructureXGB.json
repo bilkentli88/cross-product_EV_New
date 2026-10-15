@@ -1,0 +1,19 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 1,
+  "battery": "Fiat 500e",
+  "seed": 29,
+  "condition": "GlobalStructureXGB",
+  "variant": "GlobalStructure",
+  "n_states": 374,
+  "hits1": 0.4316039094360093,
+  "hits3": 0.5872401480760198,
+  "mrr": 0.5316564421954498,
+  "training_rows": 230803,
+  "feature_count": 345,
+  "runtime_seconds": 28.030584812164307,
+  "device": "cuda",
+  "origin": "New E10 training",
+  "model_sha256": "051da2d46d6c6d331310d429aeda7f2c88e644f6a476b9664bf141a1a6c37caf",
+  "states_sha256": "719a420f587c8401c6d63c088b52f6e3ae4bc3c0fd8352b176f091e1b4c380b5"
+}

@@ -1,0 +1,7 @@
+{
+  "requested_fits": 150,
+  "finished_fits": 150,
+  "full_canonical_design": true,
+  "all_requested_fits_complete": true,
+  "historical_e6_included_in_inference": false
+}

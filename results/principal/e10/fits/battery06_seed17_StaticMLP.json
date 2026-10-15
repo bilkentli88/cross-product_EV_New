@@ -1,0 +1,149 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 6,
+  "battery": "Volvo EX30",
+  "seed": 17,
+  "condition": "StaticMLP",
+  "variant": "Static",
+  "n_states": 210,
+  "hits1": 0.31353970238770873,
+  "hits3": 0.5082381547821737,
+  "mrr": 0.4498067558663827,
+  "device": "cuda",
+  "width": 85,
+  "parameter_count": 46109,
+  "gnn_parameter_count": 45713,
+  "capacity_gap_fraction": 0.008662743639664865,
+  "loss_curve": [
+    {
+      "epoch": 1,
+      "loss": 0.5972793499628702
+    },
+    {
+      "epoch": 2,
+      "loss": 0.37764812178081936
+    },
+    {
+      "epoch": 3,
+      "loss": 0.3097446362177531
+    },
+    {
+      "epoch": 4,
+      "loss": 0.24815348618560368
+    },
+    {
+      "epoch": 5,
+      "loss": 0.21867481536335415
+    },
+    {
+      "epoch": 6,
+      "loss": 0.19619791044129264
+    },
+    {
+      "epoch": 7,
+      "loss": 0.17829171816507974
+    },
+    {
+      "epoch": 8,
+      "loss": 0.16440356771151224
+    },
+    {
+      "epoch": 9,
+      "loss": 0.1586295341451963
+    },
+    {
+      "epoch": 10,
+      "loss": 0.14841295944319832
+    },
+    {
+      "epoch": 11,
+      "loss": 0.14658355712890625
+    },
+    {
+      "epoch": 12,
+      "loss": 0.1416745674279001
+    },
+    {
+      "epoch": 13,
+      "loss": 0.12969117446078193
+    },
+    {
+      "epoch": 14,
+      "loss": 0.1351437254084481
+    },
+    {
+      "epoch": 15,
+      "loss": 0.12841148012214237
+    },
+    {
+      "epoch": 16,
+      "loss": 0.12728338688611984
+    },
+    {
+      "epoch": 17,
+      "loss": 0.12308975888623132
+    },
+    {
+      "epoch": 18,
+      "loss": 0.12048179656267166
+    },
+    {
+      "epoch": 19,
+      "loss": 0.11303303721878263
+    },
+    {
+      "epoch": 20,
+      "loss": 0.11363471630546781
+    },
+    {
+      "epoch": 21,
+      "loss": 0.11149316198296017
+    },
+    {
+      "epoch": 22,
+      "loss": 0.11142846445242564
+    },
+    {
+      "epoch": 23,
+      "loss": 0.11239610198471281
+    },
+    {
+      "epoch": 24,
+      "loss": 0.10558699319760005
+    },
+    {
+      "epoch": 25,
+      "loss": 0.10418091548813714
+    },
+    {
+      "epoch": 26,
+      "loss": 0.10779473102755016
+    },
+    {
+      "epoch": 27,
+      "loss": 0.11161007152663337
+    },
+    {
+      "epoch": 28,
+      "loss": 0.10817727446556091
+    },
+    {
+      "epoch": 29,
+      "loss": 0.10072117961115307
+    },
+    {
+      "epoch": 30,
+      "loss": 0.10271133482456207
+    }
+  ],
+  "e9_training_runtime_seconds": 4.729719400405884,
+  "origin": "Verified E9 anchor; no new training",
+  "e9_provenance": {
+    "record_sha256": "2206cb789cdad596074bf016c45b418256f9aa77f3747e61c97afddf43f53a2e",
+    "states_sha256": "3c4424ff6dc4314955301439c5564aae32613e1e013705ecf8f185701dabdaa6",
+    "model_sha256": "493d57b079e127b5c0f12d59b2d9f59aaffa582c64d2c8b6eeaadfdd0831e452",
+    "original_condition": "StaticFeatureMLP"
+  },
+  "model_sha256": "493d57b079e127b5c0f12d59b2d9f59aaffa582c64d2c8b6eeaadfdd0831e452",
+  "states_sha256": "17e63cf1a75d1f05418d4585fda551c1d0e497968e13f5ce5b4228e4919978b8"
+}

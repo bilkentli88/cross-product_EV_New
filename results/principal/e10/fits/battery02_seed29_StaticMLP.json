@@ -1,0 +1,149 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 2,
+  "battery": "Chevrolet Spark",
+  "seed": 29,
+  "condition": "StaticMLP",
+  "variant": "Static",
+  "n_states": 167,
+  "hits1": 0.3565366692157443,
+  "hits3": 0.6629233809007258,
+  "mrr": 0.5345762199059069,
+  "device": "cuda",
+  "width": 85,
+  "parameter_count": 46121,
+  "gnn_parameter_count": 45737,
+  "capacity_gap_fraction": 0.008395828322802107,
+  "loss_curve": [
+    {
+      "epoch": 1,
+      "loss": 0.6192455424202813
+    },
+    {
+      "epoch": 2,
+      "loss": 0.40461694531970555
+    },
+    {
+      "epoch": 3,
+      "loss": 0.30582613746325177
+    },
+    {
+      "epoch": 4,
+      "loss": 0.27524739338292015
+    },
+    {
+      "epoch": 5,
+      "loss": 0.23529093629784054
+    },
+    {
+      "epoch": 6,
+      "loss": 0.21494655311107635
+    },
+    {
+      "epoch": 7,
+      "loss": 0.198354110121727
+    },
+    {
+      "epoch": 8,
+      "loss": 0.18266168236732483
+    },
+    {
+      "epoch": 9,
+      "loss": 0.1729850090212292
+    },
+    {
+      "epoch": 10,
+      "loss": 0.164754471845097
+    },
+    {
+      "epoch": 11,
+      "loss": 0.1537553932931688
+    },
+    {
+      "epoch": 12,
+      "loss": 0.14862408571773106
+    },
+    {
+      "epoch": 13,
+      "loss": 0.1424345216817326
+    },
+    {
+      "epoch": 14,
+      "loss": 0.14105140252245796
+    },
+    {
+      "epoch": 15,
+      "loss": 0.13219312826792398
+    },
+    {
+      "epoch": 16,
+      "loss": 0.13178656001885733
+    },
+    {
+      "epoch": 17,
+      "loss": 0.12742000569899878
+    },
+    {
+      "epoch": 18,
+      "loss": 0.12386321773131688
+    },
+    {
+      "epoch": 19,
+      "loss": 0.11941002309322357
+    },
+    {
+      "epoch": 20,
+      "loss": 0.12044494185182783
+    },
+    {
+      "epoch": 21,
+      "loss": 0.11970925745036867
+    },
+    {
+      "epoch": 22,
+      "loss": 0.11643368833594853
+    },
+    {
+      "epoch": 23,
+      "loss": 0.11858754687839085
+    },
+    {
+      "epoch": 24,
+      "loss": 0.11786886552969615
+    },
+    {
+      "epoch": 25,
+      "loss": 0.11327828135755327
+    },
+    {
+      "epoch": 26,
+      "loss": 0.11116970578829448
+    },
+    {
+      "epoch": 27,
+      "loss": 0.11247416916820738
+    },
+    {
+      "epoch": 28,
+      "loss": 0.11050987740357716
+    },
+    {
+      "epoch": 29,
+      "loss": 0.11638415604829788
+    },
+    {
+      "epoch": 30,
+      "loss": 0.10664720584948857
+    }
+  ],
+  "e9_training_runtime_seconds": 4.6020188331604,
+  "origin": "Verified E9 anchor; no new training",
+  "e9_provenance": {
+    "record_sha256": "5e5af86c68f06a8edceb8062385cff57a4de069963056d8fb9948820564049fe",
+    "states_sha256": "b51c4418e3e6846cc5276a694caacf6efa5d34c73f0fb46b7f3aabf7bdc8e522",
+    "model_sha256": "ec7aad1c185b56a13b60c89699f8b20edec5aa2cede73fcc69380bb673a86361",
+    "original_condition": "StaticFeatureMLP"
+  },
+  "model_sha256": "ec7aad1c185b56a13b60c89699f8b20edec5aa2cede73fcc69380bb673a86361",
+  "states_sha256": "d34bea53fe07abcc8cbaa9aa377258ad46a6785f8b721cb921612749d777e5c2"
+}

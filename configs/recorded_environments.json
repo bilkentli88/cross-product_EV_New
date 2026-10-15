@@ -1,0 +1,27 @@
+{
+  "e9": {
+    "feature_version": "E9-state-scalars-v1.0",
+    "torch_version": "2.11.0+cu130",
+    "xgboost_version": "3.4.1",
+    "sklearn_version": "1.6.1",
+    "numpy_version": "2.1.3"
+  },
+  "e10": {
+    "feature_version": "E10-frozen-family-v1.0",
+    "cpu_threads": 2,
+    "device": "cuda",
+    "torch_version": "2.11.0+cu130",
+    "xgboost_version": "3.4.1",
+    "sklearn_version": "1.6.1",
+    "numpy_version": "2.1.3",
+    "python_version": "3.13.15"
+  },
+  "e11": {
+    "cpu_threads": 4,
+    "device": "cuda",
+    "torch_version": "2.11.0+cu130",
+    "numpy_version": "2.1.3",
+    "pandas_version": "2.2.3",
+    "python_version": "3.13.15"
+  }
+}

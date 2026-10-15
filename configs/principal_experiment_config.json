@@ -1,0 +1,75 @@
+{
+  "purpose": "Human-readable summary; notebooks and saved protocol.json files are executable/provenance authorities.",
+  "dataset_doi": "10.35097/emz24pksshndq468",
+  "dataset_sha256": {
+    "battery_catalogue.csv": "a1de7eadff569c511f8aeabf1fa7013bc249f4ad450a7f9bf6a09ca1710371b3",
+    "parts.csv": "3ceaba9d186dcc7342499e3ccf432a07c78b75dbd4cc732c0b43a92aa140c790",
+    "fixations.csv": "5bc454a59509275b199828fc7376d28507046bffd28c3f4ec23f076d8bd52339",
+    "operations.csv": "8cfad668c5b87765dc4de044d72c8b8ce439d67740506a422e4597dc4fc4ba05"
+  },
+  "training": {
+    "seeds": [
+      17,
+      29,
+      43
+    ],
+    "epochs": 30,
+    "optimizer": "AdamW",
+    "learning_rate": 0.002,
+    "weight_decay": 0.0001,
+    "dropout": 0.1,
+    "negatives_per_state": 8,
+    "updates_per_fit": 270,
+    "scalar_mlp_width": 85,
+    "gnn_operation_width": 64,
+    "graph_width": 32
+  },
+  "xgb": {
+    "objective": "rank:pairwise",
+    "trees": 250,
+    "max_depth": 6,
+    "learning_rate": 0.05,
+    "device": "cpu",
+    "tree_method": "hist",
+    "training_queries": "All remaining candidates for each nonsingleton query"
+  },
+  "e9": {
+    "fit_records": 150,
+    "designated_hits1_tests": 4
+  },
+  "e10": {
+    "fit_records": 300,
+    "verified_e9_reuse": 120,
+    "new_fits": 180,
+    "variants": [
+      "Static",
+      "GlobalOnly",
+      "GlobalStatus",
+      "GlobalStructure",
+      "Full"
+    ],
+    "designated_hits1_tests": 6
+  },
+  "e11": {
+    "fit_records": 210,
+    "all_fits_new": true,
+    "realizations": 5,
+    "permutation_base_seed": 20261011,
+    "permutation": "Two fixed priority lists per product/realization restricted to canonical active set",
+    "canonical_node_degree_retained": true,
+    "designated_hits1_tests": 2
+  },
+  "statistics": {
+    "unit": "Held-out product",
+    "products": 10,
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20261003,
+    "exact_sign_assignments": 1024,
+    "holm_families": [
+      4,
+      6,
+      2
+    ],
+    "intervals": "Descriptive percentile bootstrap; no whole-study multiplicity claim"
+  }
+}

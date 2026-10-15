@@ -1,0 +1,25 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 6,
+  "battery": "Volvo EX30",
+  "seed": 43,
+  "condition": "FullXGB",
+  "variant": "Full",
+  "n_states": 210,
+  "hits1": 0.33061843053786544,
+  "hits3": 0.5093156090739137,
+  "mrr": 0.4558246336154927,
+  "device": "cuda",
+  "training_rows": 278773,
+  "feature_count": 339,
+  "e9_training_runtime_seconds": 30.453883171081543,
+  "origin": "Verified E9 anchor; no new training",
+  "e9_provenance": {
+    "record_sha256": "3fa7b151943aa693c9489866ee5023223ea17a3d1a7b00377067b6a229a52514",
+    "states_sha256": "50c9c8521d6a0f37310a2b962d479aeaa43f4d85f74d56f428a83a36c543d53e",
+    "model_sha256": "a6866ce1077899162010bdec80eaf3c072fe1a40b5eecc7556d21357ff3787b9",
+    "original_condition": "StateAwareXGB"
+  },
+  "model_sha256": "a6866ce1077899162010bdec80eaf3c072fe1a40b5eecc7556d21357ff3787b9",
+  "states_sha256": "3ed05b85300545b9ffa8cdf7d9d94045cd920586a41b4ac7d8742449d6e9bce8"
+}

@@ -1,0 +1,25 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 10,
+  "battery": "BMW i3",
+  "seed": 29,
+  "condition": "FullXGB",
+  "variant": "Full",
+  "n_states": 172,
+  "hits1": 0.41901710372978584,
+  "hits3": 0.602981543747497,
+  "mrr": 0.5413846107369551,
+  "device": "cuda",
+  "training_rows": 286050,
+  "feature_count": 351,
+  "e9_training_runtime_seconds": 30.67429256439209,
+  "origin": "Verified E9 anchor; no new training",
+  "e9_provenance": {
+    "record_sha256": "befa95dd8d0ec87563e08d39a55d70ce57549f6dae1e787ae0b91ba249e36d3c",
+    "states_sha256": "6ebc830bbd11aeef1b7a6effc142fa0f580759b09ce795c53396ad841bc0f374",
+    "model_sha256": "de3314e6b43e89d9b63f631c9089380eb1880f65b725ed54d9c1b6c383b42cc4",
+    "original_condition": "StateAwareXGB"
+  },
+  "model_sha256": "de3314e6b43e89d9b63f631c9089380eb1880f65b725ed54d9c1b6c383b42cc4",
+  "states_sha256": "9e9b365431925e50c10e8d097f20e1584245c1c9bb4ed4f15df7b5a09908eb77"
+}

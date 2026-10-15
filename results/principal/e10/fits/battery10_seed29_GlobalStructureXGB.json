@@ -1,0 +1,19 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 10,
+  "battery": "BMW i3",
+  "seed": 29,
+  "condition": "GlobalStructureXGB",
+  "variant": "GlobalStructure",
+  "n_states": 172,
+  "hits1": 0.41901710372978584,
+  "hits3": 0.602981543747497,
+  "mrr": 0.5400890017378577,
+  "training_rows": 286050,
+  "feature_count": 351,
+  "runtime_seconds": 30.213459730148315,
+  "device": "cuda",
+  "origin": "New E10 training",
+  "model_sha256": "e34f763757921536864227ac5c75734d1ae70682c2f3a5ee2a50667505b1fe98",
+  "states_sha256": "69f837c153f195f491b2fe304967d00c36e6281d9e017c9362dc1a1d094ba855"
+}

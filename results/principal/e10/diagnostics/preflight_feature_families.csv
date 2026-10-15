@@ -1,0 +1,11 @@
+battery_id,states,local_features,status_features,structure_features,xgb_features,all_families_checked,e9_endpoints_identical
+1,374,33,6,27,345,True,True
+2,167,33,6,27,345,True,True
+3,386,33,6,27,345,True,True
+4,157,33,6,27,345,True,True
+5,166,33,6,27,345,True,True
+6,210,33,6,27,345,True,True
+7,130,33,6,27,345,True,True
+8,327,33,6,27,345,True,True
+9,182,33,6,27,345,True,True
+10,172,33,6,27,345,True,True

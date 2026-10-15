@@ -1,0 +1,15 @@
+{
+  "protocol_signature": "ddc68c2037aa04f99b6bc402683dc44baa9702faff1c456b033998641e072acd",
+  "battery_id": 2,
+  "battery": "Chevrolet Spark",
+  "seed": 17,
+  "condition": "StateAwareXGB",
+  "n_states": 167,
+  "runtime_seconds": 30.408040046691895,
+  "device": "cuda",
+  "hits1": 0.4687497430680396,
+  "hits3": 0.6811993290045181,
+  "mrr": 0.59965421377252,
+  "training_rows": 286900,
+  "feature_count": 345
+}

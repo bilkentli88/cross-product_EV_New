@@ -1,0 +1,19 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 4,
+  "battery": "BMW 530e",
+  "seed": 29,
+  "condition": "GlobalOnlyXGB",
+  "variant": "GlobalOnly",
+  "n_states": 157,
+  "hits1": 0.4079116592891558,
+  "hits3": 0.6307413472942188,
+  "mrr": 0.5460018337018478,
+  "training_rows": 288525,
+  "feature_count": 351,
+  "runtime_seconds": 31.54373025894165,
+  "device": "cuda",
+  "origin": "New E10 training",
+  "model_sha256": "668a3b4d3a8702889a138e2fd9af856ba43e621207b8d96ca99e931fda2dad7e",
+  "states_sha256": "61764a7f3711313cae89b32a265079325e6a4faed137b040d0fccf5407ab2ee3"
+}

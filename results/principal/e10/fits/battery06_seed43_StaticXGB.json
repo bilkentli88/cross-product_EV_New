@@ -1,0 +1,25 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 6,
+  "battery": "Volvo EX30",
+  "seed": 43,
+  "condition": "StaticXGB",
+  "variant": "Static",
+  "n_states": 210,
+  "hits1": 0.31814287699088334,
+  "hits3": 0.5345873611313801,
+  "mrr": 0.45798293656786987,
+  "device": "cuda",
+  "training_rows": 278773,
+  "feature_count": 339,
+  "e9_training_runtime_seconds": 30.02200937271118,
+  "origin": "Verified E9 anchor; no new training",
+  "e9_provenance": {
+    "record_sha256": "26fe78eaef0fcfcf82808f5671c037ec5c334f02693f3bf57effb1934d470c47",
+    "states_sha256": "8424db29eaafe8e1c0bd6c0fd63f0fddeccae160922cb29de509fcc03074fdda",
+    "model_sha256": "96292fc6bf8562a0ebe82ca831f48c69aba10ad8bb76f5c788ec483c56b5c03b",
+    "original_condition": "StaticFeatureXGB"
+  },
+  "model_sha256": "96292fc6bf8562a0ebe82ca831f48c69aba10ad8bb76f5c788ec483c56b5c03b",
+  "states_sha256": "3c75ee6e7c9e9ad28fa9a5a4e57ac066309dbadcbdbcb2b4e34d76f01c378086"
+}

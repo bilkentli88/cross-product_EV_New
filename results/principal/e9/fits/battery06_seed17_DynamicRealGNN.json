@@ -1,0 +1,14 @@
+{
+  "protocol_signature": "ddc68c2037aa04f99b6bc402683dc44baa9702faff1c456b033998641e072acd",
+  "battery_id": 6,
+  "battery": "Volvo EX30",
+  "seed": 17,
+  "condition": "DynamicRealGNN",
+  "n_states": 210,
+  "runtime_seconds": 12.360612869262695,
+  "device": "cuda",
+  "hits1": 0.3582222420702484,
+  "hits3": 0.5302222817663007,
+  "mrr": 0.4797229419426544,
+  "parameter_count": 45713
+}

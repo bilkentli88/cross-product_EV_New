@@ -1,0 +1,15 @@
+{
+  "protocol_signature": "ddc68c2037aa04f99b6bc402683dc44baa9702faff1c456b033998641e072acd",
+  "battery_id": 8,
+  "battery": "MG ZS",
+  "seed": 43,
+  "condition": "StaticFeatureXGB",
+  "n_states": 327,
+  "runtime_seconds": 28.807448625564575,
+  "device": "cuda",
+  "hits1": 0.4065212758364589,
+  "hits3": 0.5605424207815479,
+  "mrr": 0.5098738793164223,
+  "training_rows": 247300,
+  "feature_count": 339
+}

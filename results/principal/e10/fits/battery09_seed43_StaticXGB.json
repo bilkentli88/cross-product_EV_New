@@ -1,0 +1,25 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 9,
+  "battery": "Mitsubishi Outlander",
+  "seed": 43,
+  "condition": "StaticXGB",
+  "variant": "Static",
+  "n_states": 182,
+  "hits1": 0.29434838628536186,
+  "hits3": 0.49522464603557287,
+  "mrr": 0.43442804298280335,
+  "device": "cuda",
+  "training_rows": 284275,
+  "feature_count": 327,
+  "e9_training_runtime_seconds": 32.69669842720032,
+  "origin": "Verified E9 anchor; no new training",
+  "e9_provenance": {
+    "record_sha256": "70e2af28742c2fb8aceee074ecb6d626429858774a6ca2733a6ebec6198bd52f",
+    "states_sha256": "45864133763cae58b94aaeaf65e4fb4c56b9110323069977471804e068797d94",
+    "model_sha256": "eebc0019808bb81584291ce7ac7c9f853f0c92019daf36ce0197f0aa8b0b67c8",
+    "original_condition": "StaticFeatureXGB"
+  },
+  "model_sha256": "eebc0019808bb81584291ce7ac7c9f853f0c92019daf36ce0197f0aa8b0b67c8",
+  "states_sha256": "4da9423bc0b2159344a3206a8bcec7864e11160962064fa72d15fee928699aa8"
+}

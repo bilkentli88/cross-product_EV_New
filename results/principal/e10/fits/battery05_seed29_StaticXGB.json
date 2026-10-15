@@ -1,0 +1,25 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 5,
+  "battery": "Chevrolet Volt",
+  "seed": 29,
+  "condition": "StaticXGB",
+  "variant": "Static",
+  "n_states": 166,
+  "hits1": 0.40180457347466647,
+  "hits3": 0.6271004674119512,
+  "mrr": 0.5516049006995941,
+  "device": "cuda",
+  "training_rows": 287067,
+  "feature_count": 345,
+  "e9_training_runtime_seconds": 32.49641227722168,
+  "origin": "Verified E9 anchor; no new training",
+  "e9_provenance": {
+    "record_sha256": "4e6aded3420eb65c6044642d213008d71191bcdf853d335962bf812aabe48558",
+    "states_sha256": "b5d3691316db0ca58c69bf40dba67f63330020a1c15e00851a54bcef16c7341b",
+    "model_sha256": "5938492680f089d877437687f23b2865e687af9b17beb543e3720a6059adf1df",
+    "original_condition": "StaticFeatureXGB"
+  },
+  "model_sha256": "5938492680f089d877437687f23b2865e687af9b17beb543e3720a6059adf1df",
+  "states_sha256": "524072080ce85696ce60b8f8093ed5f5770c073a48f563d48c159c9f6ed50ba7"
+}

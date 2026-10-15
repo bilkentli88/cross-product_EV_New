@@ -1,0 +1,19 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 6,
+  "battery": "Volvo EX30",
+  "seed": 29,
+  "condition": "GlobalStatusXGB",
+  "variant": "GlobalStatus",
+  "n_states": 210,
+  "hits1": 0.31814287699088334,
+  "hits3": 0.5406191071631261,
+  "mrr": 0.4607206705474027,
+  "training_rows": 278773,
+  "feature_count": 339,
+  "runtime_seconds": 30.813576221466064,
+  "device": "cuda",
+  "origin": "New E10 training",
+  "model_sha256": "b14c1bd0c84e9b05e78e5fe148698d5b52d62403cf57a6d8afa2576131909f06",
+  "states_sha256": "a713a06413aaefb74738e3e32b7f2f62e3ed217f289e96792ff8bc8a9001e90a"
+}

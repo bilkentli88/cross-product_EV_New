@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+generated_figures/
+local_runs/
+*.pt
+*.ubj
+*.tar
+*.tar.gz
+raw_exports/
+EV_Final_Experiment_Exports.zip

@@ -1,0 +1,10 @@
+{
+  "requested_fits": 210,
+  "finished_fits": 210,
+  "all_requested_fits_complete": true,
+  "full_canonical_design": true,
+  "verified_e9_real_anchors": 0,
+  "new_training_records": 210,
+  "primary_inference_enabled": true,
+  "status": "Complete"
+}

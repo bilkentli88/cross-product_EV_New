@@ -1,0 +1,19 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 5,
+  "battery": "Chevrolet Volt",
+  "seed": 29,
+  "condition": "GlobalStatusXGB",
+  "variant": "GlobalStatus",
+  "n_states": 166,
+  "hits1": 0.419876862631293,
+  "hits3": 0.6301125156047224,
+  "mrr": 0.5610405080004581,
+  "training_rows": 287067,
+  "feature_count": 345,
+  "runtime_seconds": 30.647112131118774,
+  "device": "cuda",
+  "origin": "New E10 training",
+  "model_sha256": "cf6d46eeed535f554c7f84d8342b6ceeaa54ddcbc14c3d9d73302e492800468b",
+  "states_sha256": "f4a01f142d98cc2c8cd442cab9d4c359c10436ba41cff4a2101818c8c3e47aa1"
+}

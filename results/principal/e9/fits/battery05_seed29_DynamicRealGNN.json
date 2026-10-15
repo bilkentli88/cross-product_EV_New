@@ -1,0 +1,14 @@
+{
+  "protocol_signature": "ddc68c2037aa04f99b6bc402683dc44baa9702faff1c456b033998641e072acd",
+  "battery_id": 5,
+  "battery": "Chevrolet Volt",
+  "seed": 29,
+  "condition": "DynamicRealGNN",
+  "n_states": 166,
+  "runtime_seconds": 12.370219230651855,
+  "device": "cuda",
+  "hits1": 0.48173572665883174,
+  "hits3": 0.6530385052777,
+  "mrr": 0.5909697716449864,
+  "parameter_count": 45737
+}

@@ -1,0 +1,25 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 8,
+  "battery": "MG ZS",
+  "seed": 43,
+  "condition": "StaticXGB",
+  "variant": "Static",
+  "n_states": 327,
+  "hits1": 0.4065212758364589,
+  "hits3": 0.5605424207815479,
+  "mrr": 0.5098738793164223,
+  "device": "cuda",
+  "training_rows": 247300,
+  "feature_count": 339,
+  "e9_training_runtime_seconds": 28.807448625564575,
+  "origin": "Verified E9 anchor; no new training",
+  "e9_provenance": {
+    "record_sha256": "9c88d8764b71a30cc6002f14f35e05325648f06f10328ba537731d6d14391c14",
+    "states_sha256": "98555cf25785c1aefede6623bbf4f6f57b39792e20dbd6f06d0e93448a2bfe54",
+    "model_sha256": "a21a32c42ad5b00d13b8c8e9a17e9fe7781227d84e109ced5b5f11a9897a837d",
+    "original_condition": "StaticFeatureXGB"
+  },
+  "model_sha256": "a21a32c42ad5b00d13b8c8e9a17e9fe7781227d84e109ced5b5f11a9897a837d",
+  "states_sha256": "d70ca0426a5d6b91cc526dae9cbba26b6c8377d8372e9bc416ce2a3e5b251240"
+}

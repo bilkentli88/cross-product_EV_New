@@ -1,0 +1,14 @@
+{
+  "protocol_signature": "ddc68c2037aa04f99b6bc402683dc44baa9702faff1c456b033998641e072acd",
+  "battery_id": 4,
+  "battery": "BMW 530e",
+  "seed": 17,
+  "condition": "DynamicRealGNN",
+  "n_states": 157,
+  "runtime_seconds": 12.435978174209595,
+  "device": "cuda",
+  "hits1": 0.39772057648660797,
+  "hits3": 0.6069090755320108,
+  "mrr": 0.5308279335972023,
+  "parameter_count": 45761
+}

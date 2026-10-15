@@ -1,0 +1,30 @@
+{
+  "source_zip": "e10_state_feature_families_results (2).zip",
+  "source_zip_sha256": "267b56dec4595bb3ed85e01e3471342eca842c855ec972f7629a8a4335096779",
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "finished_fits": 300,
+  "verified_reused_anchors": 120,
+  "new_fits": 180,
+  "products": 10,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "conditions": 10,
+  "per_state_rows": 68130,
+  "distinct_ranking_states": 2271,
+  "all_requested_fits_complete": true,
+  "full_canonical_design": true,
+  "checks": [
+    "All 300 state and model hashes match fit records",
+    "All state metrics reproduce fit means",
+    "Full factorial fit keys match the protocol",
+    "All 120 imported anchors match original E9 metrics, models, and provenance",
+    "Dataset and delivered implementation hashes match",
+    "All 150 MLP fits have 30 finite epoch losses",
+    "All 150 XGB checkpoints contain 250 boosting rounds and their recorded feature counts"
+  ],
+  "source_summary_files_present": false,
+  "inference": "Six primary Hits@1 contrasts with Holm adjustment; 10 products as comparison unit; bootstrap intervals descriptive"
+}

@@ -1,0 +1,46 @@
+{
+  "diagnostic_only": true,
+  "checkpoint_reevaluation_device": "cpu",
+  "all_210_checkpoints_reevaluated": true,
+  "different_metric_cells": 376,
+  "metric_cells": 143073,
+  "fits_with_any_metric_difference": 119,
+  "cpu_primary": [
+    {
+      "contrast": "Real - ActiveShuffle",
+      "mean_difference": 0.051112548055538706,
+      "product_wins": 10,
+      "p_exact": 0.001953125,
+      "p_holm": 0.00390625
+    },
+    {
+      "contrast": "Real - NoEdge",
+      "mean_difference": 0.07440015699867315,
+      "product_wins": 9,
+      "p_exact": 0.00390625,
+      "p_holm": 0.00390625
+    }
+  ],
+  "cpu_aggregate": [
+    {
+      "family": "ActiveShuffle",
+      "hits1": 0.33385257052030065,
+      "hits3": 0.5278708692912439,
+      "mrr": 0.46666574762519053
+    },
+    {
+      "family": "NoEdge",
+      "hits1": 0.31056496157716623,
+      "hits3": 0.49125625094818937,
+      "mrr": 0.43809590824439343
+    },
+    {
+      "family": "Real",
+      "hits1": 0.3849651185758393,
+      "hits3": 0.5697845469015769,
+      "mrr": 0.5088463487498919
+    }
+  ],
+  "graph_controls_regenerated_for_all_products": true,
+  "primary_results_remain_original_gpu_protocol": true
+}

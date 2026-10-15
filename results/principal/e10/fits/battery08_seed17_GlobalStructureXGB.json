@@ -1,0 +1,19 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 8,
+  "battery": "MG ZS",
+  "seed": 17,
+  "condition": "GlobalStructureXGB",
+  "variant": "GlobalStructure",
+  "n_states": 327,
+  "hits1": 0.3787434980586811,
+  "hits3": 0.5414292709344531,
+  "mrr": 0.4862111922130082,
+  "training_rows": 247300,
+  "feature_count": 339,
+  "runtime_seconds": 29.147512912750244,
+  "device": "cuda",
+  "origin": "New E10 training",
+  "model_sha256": "3b123850728ae62f7f778acaf1129e33849f49db376e1a9c73f705393df818bf",
+  "states_sha256": "dbada4e0ae1780d290f8f1a5b6c63bb40176b49006da38dc7b145f84fdf05e02"
+}

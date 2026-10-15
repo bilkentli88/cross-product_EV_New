@@ -1,0 +1,26 @@
+[
+  {
+    "study": "e9",
+    "path": "notebooks/E9_State_Aware_Baselines.ipynb",
+    "sha256": "023773bb4f03f9de5ebc221578a5aefdd3c2c5697cee048678773b18d82855b2",
+    "code_cells_sha256": "b94ab34898505ff5d4c1cd6625d40a89afee472b97ce697cf302183869d832bf",
+    "preserved_byte_for_byte": true,
+    "run_full_experiment_default": true
+  },
+  {
+    "study": "e10",
+    "path": "notebooks/E10_State_Feature_Families.ipynb",
+    "sha256": "f3655739fea76bc6f7838f66000ba44b210702cdead9475284bf6d1bca79f28c",
+    "code_cells_sha256": "36df9405f6e79650c5983cb00e8ab3890f6f46cdda3bb28a462b7f56406bc289",
+    "preserved_byte_for_byte": true,
+    "run_full_experiment_default": false
+  },
+  {
+    "study": "e11",
+    "path": "notebooks/E11_Canonical_Degree_Adjacency.ipynb",
+    "sha256": "385ab7c237b30400c14e6bf873b522b85dcdbc7d9e7eb4a8cb563e680f8ea0fa",
+    "code_cells_sha256": "1dd7c5758d164f3116f22254f55710657c9519c52468511d863529a1874d9c92",
+    "preserved_byte_for_byte": true,
+    "run_full_experiment_default": true
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "vocab": {
+    "part": {
+      "<UNK>": 0,
+      "BMS": 1,
+      "BMS cover": 2,
+      "BMS frame": 3,
+      "BMS module": 4,
+      "GND cable": 5,
+      "HV cable": 6,
+      "LV cable": 7,
+      "busbar": 8,
+      "coolant pump": 9,
+      "coolant tubing": 10,
+      "cooling fan": 11,
+      "cooling fan cover": 12,
+      "cooling fan frame": 13,
+      "cooling plate": 14,
+      "cooling tunnel": 15,
+      "disconnect unit": 16,
+      "disconnect unit cover": 17,
+      "housing bottom": 18,
+      "housing cover": 19,
+      "insulation cap": 20,
+      "insulation rubber": 21,
+      "insulation sheet": 22,
+      "main connector": 23,
+      "module": 24,
+      "module clamp": 25,
+      "module frame": 26,
+      "service disconnect": 27,
+      "service disconnect cover": 28,
+      "vent tubing": 29,
+      "wire harness": 30
+    },
+    "fix": {
+      "<UNK>": 0,
+      "cable tie": 1,
+      "clip": 2,
+      "fixed": 3,
+      "plug": 4,
+      "screw": 5,
+      "screwing": 6
+    },
+    "skill": {
+      "<UNK>": 0,
+      "cut": 1,
+      "lift_off": 2,
+      "open": 3,
+      "unclip": 4,
+      "unplug": 5,
+      "unscrew": 6
+    }
+  },
+  "parameter_count": 45713
+}

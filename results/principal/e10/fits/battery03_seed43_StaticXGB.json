@@ -1,0 +1,25 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 3,
+  "battery": "Hyundai IONIQ 5",
+  "seed": 43,
+  "condition": "StaticXGB",
+  "variant": "Static",
+  "n_states": 386,
+  "hits1": 0.4255388557164053,
+  "hits3": 0.5915992959920484,
+  "mrr": 0.5297169231576728,
+  "device": "cuda",
+  "training_rows": 226237,
+  "feature_count": 343,
+  "e9_training_runtime_seconds": 26.16917872428894,
+  "origin": "Verified E9 anchor; no new training",
+  "e9_provenance": {
+    "record_sha256": "eae3e78b4e7f37530fb3f32d70f0b88cd70e51f035007554ad771d4f4bfc8fc8",
+    "states_sha256": "f777a31dd6b15768c62831a028b57063739842d2940d4f684278ab18d0e2cc81",
+    "model_sha256": "913bd8ea74bae6c27853031f0e74f01c4b4a14d532adef9f3f9f9fe30b5bb083",
+    "original_condition": "StaticFeatureXGB"
+  },
+  "model_sha256": "913bd8ea74bae6c27853031f0e74f01c4b4a14d532adef9f3f9f9fe30b5bb083",
+  "states_sha256": "e704d68a1f26c2f1b7bc8912f035a5c05147839030c7ce78512444bc852d3167"
+}

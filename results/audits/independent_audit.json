@@ -1,0 +1,31 @@
+{
+  "archive_sha256": "607c217c66721a1bc57f15f86297c6edd69fec16a814eeaeaf3645ba5fe4663a",
+  "protocol_signature": "b46392664ae2c763bbf266248a92a417aa8594438f2925790aba3de81fdad66e",
+  "fits": 210,
+  "state_rows": 47691,
+  "unique_states": 2271,
+  "all_fits_new_training": true,
+  "all_model_and_state_checksums_verified": true,
+  "all_fit_means_verified": true,
+  "summaries_and_primary_tests_verified": true,
+  "parameters_by_product": {
+    "1": 45737,
+    "2": 45737,
+    "3": 45725,
+    "4": 45761,
+    "5": 45737,
+    "6": 45713,
+    "7": 45761,
+    "8": 45713,
+    "9": 45665,
+    "10": 45761
+  },
+  "total_training_seconds": 2680.242232322693,
+  "real_anchor_report": {
+    "requested": true,
+    "eligible": false,
+    "checked_fits": 1,
+    "reason": "AssertionError: \nNot equal to tolerance rtol=0, atol=1e-12\n\nMismatched elements: 1 / 1122 (0.0891%)\nMax absolute difference among violations: 0.00044563\nMax relative difference among violations: 0.03030303\n ACTUAL: array([[0.014286, 0.042857, 0.069041],\n       [0.014493, 0.043478, 0.069834],\n       [0.014706, 0.044118, 0.070648],...\n DESIRED: array([[0.014286, 0.042857, 0.069041],\n       [0.014493, 0.043478, 0.069834],\n       [0.014706, 0.044118, 0.070648],...",
+    "new_full_budget": 210
+  }
+}

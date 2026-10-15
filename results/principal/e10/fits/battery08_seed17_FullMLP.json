@@ -1,0 +1,149 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 8,
+  "battery": "MG ZS",
+  "seed": 17,
+  "condition": "FullMLP",
+  "variant": "Full",
+  "n_states": 327,
+  "hits1": 0.4093777436309556,
+  "hits3": 0.5643439620577263,
+  "mrr": 0.5150266975460803,
+  "device": "cuda",
+  "width": 85,
+  "parameter_count": 46109,
+  "gnn_parameter_count": 45713,
+  "capacity_gap_fraction": 0.008662743639664865,
+  "loss_curve": [
+    {
+      "epoch": 1,
+      "loss": 0.5842024750179715
+    },
+    {
+      "epoch": 2,
+      "loss": 0.3746627238061693
+    },
+    {
+      "epoch": 3,
+      "loss": 0.3023315237628089
+    },
+    {
+      "epoch": 4,
+      "loss": 0.24982607530223
+    },
+    {
+      "epoch": 5,
+      "loss": 0.21344679594039917
+    },
+    {
+      "epoch": 6,
+      "loss": 0.18991717530621421
+    },
+    {
+      "epoch": 7,
+      "loss": 0.1739924367931154
+    },
+    {
+      "epoch": 8,
+      "loss": 0.15562665296925438
+    },
+    {
+      "epoch": 9,
+      "loss": 0.15067091335852942
+    },
+    {
+      "epoch": 10,
+      "loss": 0.13788535445928574
+    },
+    {
+      "epoch": 11,
+      "loss": 0.13284303744633993
+    },
+    {
+      "epoch": 12,
+      "loss": 0.1265571200185352
+    },
+    {
+      "epoch": 13,
+      "loss": 0.11907374196582371
+    },
+    {
+      "epoch": 14,
+      "loss": 0.11532359735833274
+    },
+    {
+      "epoch": 15,
+      "loss": 0.11678288049168056
+    },
+    {
+      "epoch": 16,
+      "loss": 0.1110431816842821
+    },
+    {
+      "epoch": 17,
+      "loss": 0.1096224875913726
+    },
+    {
+      "epoch": 18,
+      "loss": 0.10981858107778761
+    },
+    {
+      "epoch": 19,
+      "loss": 0.10426787866486444
+    },
+    {
+      "epoch": 20,
+      "loss": 0.10612062282032436
+    },
+    {
+      "epoch": 21,
+      "loss": 0.10504113137722015
+    },
+    {
+      "epoch": 22,
+      "loss": 0.10021061284674539
+    },
+    {
+      "epoch": 23,
+      "loss": 0.10690600590573417
+    },
+    {
+      "epoch": 24,
+      "loss": 0.10831611603498459
+    },
+    {
+      "epoch": 25,
+      "loss": 0.10341159999370575
+    },
+    {
+      "epoch": 26,
+      "loss": 0.10020482291777928
+    },
+    {
+      "epoch": 27,
+      "loss": 0.0968480192952686
+    },
+    {
+      "epoch": 28,
+      "loss": 0.09629927492803997
+    },
+    {
+      "epoch": 29,
+      "loss": 0.09699778341584736
+    },
+    {
+      "epoch": 30,
+      "loss": 0.09851938900020388
+    }
+  ],
+  "e9_training_runtime_seconds": 6.028653860092163,
+  "origin": "Verified E9 anchor; no new training",
+  "e9_provenance": {
+    "record_sha256": "bdcc4556ca834750dfeff49a049ee375f539f1c3d9fd91bd81c8426650556537",
+    "states_sha256": "d9541235633cb4756512dbd6b20a23d77d1735703df8176e940ce6cb7cf99c4b",
+    "model_sha256": "50630b5874c245988b441116896e151584ddd775ae4c1bc0e7cefd6d87aeb749",
+    "original_condition": "StateAwareMLP"
+  },
+  "model_sha256": "50630b5874c245988b441116896e151584ddd775ae4c1bc0e7cefd6d87aeb749",
+  "states_sha256": "3bc8487d833e3ac2113f0676fb7e7545ab53ae1cb0914e462b34b2a3d02e0472"
+}

@@ -1,0 +1,15 @@
+{
+  "protocol_signature": "ddc68c2037aa04f99b6bc402683dc44baa9702faff1c456b033998641e072acd",
+  "battery_id": 9,
+  "battery": "Mitsubishi Outlander",
+  "seed": 29,
+  "condition": "StaticFeatureXGB",
+  "n_states": 182,
+  "runtime_seconds": 30.49470090866089,
+  "device": "cuda",
+  "hits1": 0.3056265817740837,
+  "hits3": 0.5049749834174891,
+  "mrr": 0.4454338663170835,
+  "training_rows": 284275,
+  "feature_count": 327
+}

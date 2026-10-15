@@ -1,290 +1,43 @@
-# Reproducibility guide
+# Reproducing the principal audit
 
-## 1. Scope and experimental unit
+Run commands from the repository root with Python 3.10 or newer. The notebooks were designed for Colab and contain normal Colab Drive authorization. The saved-output verification commands do not use Drive or network access.
 
-The manuscript evaluates reference next-operation ranking on 10 EV battery products under strict leave-one-product-out (LOPO) evaluation. In each fold, one complete battery is held out and all model fitting uses only the remaining products. The held-out battery product is the independent unit for statistical comparison.
+## 1. Verify saved results first
 
-Battery identity, raw component identifiers, raw fixation identifiers, and raw operation identifiers are excluded from the predictive representation. Categorical vocabularies are built from the training products only; unseen held-out categories map to an unknown token.
+Install `requirements.txt`, then run `scripts/verify_repository.py`, `scripts/verify_saved_statistics.py`, `scripts/verify_state_records.py`, and `scripts/regenerate_figures.py`. The first three scripts are read-only and fail on inconsistent records. Figures go into `generated_figures/` by default; override with `--output-dir PATH`.
 
-The target is the recorded immediate next operation among operations that appear later in the same recorded sequence. The dataset supplies one recorded sequence per battery, so this is a reference-ranking task rather than exhaustive physical-feasibility classification.
+- E9: 150 fit/state records, five conditions, ten products, three seeds.
+- E10: 300 records; 120 verified endpoint reuses and 180 new fits. Reused endpoints are not independent replications.
+- E11: 210 new fits; 30 Real, 150 ActiveShuffle, 30 NoEdge. The matched E11 Real reference is separate from E9's GNN.
 
-## 2. Canonical notebook sequence
+`verify_saved_statistics.py` recomputes all fit-to-product-to-aggregate means, the 12 designated Hits@1 exact sign-flip tests, their three separate Holm families, and the stored descriptive intervals. `verify_state_records.py` additionally reconstructs each fit mean from its saved per-state ranking metrics, validates product/seed/condition identifiers, positions, candidate sizes, metric bounds, protocol signatures and available state checksums, and checks E10's reused endpoint provenance against E9. This does not regenerate features from raw engineering data or re-evaluate neural checkpoints.
 
-### A. Initial cross-product baseline
+## 2. Data and full retraining
 
-`notebooks/Battery_Disassembly_MLP_vs_GNN_LOPO.ipynb`
+The raw dataset is external; see `data/README.md`. Open the self-contained notebooks in Colab and run their numbered cells in order. All folds must have matching original CSV hashes. Raw identifiers are lookup keys, not model features; future order provides targets, not predictive input. Keep the post-current-operation updater, full candidate evaluation and training-only categorical vocabularies unchanged.
 
-Compares the attribute-only MLP with the real-topology GNN under the common LOPO protocol.
+1. **E9:** open `notebooks/E9_State_Aware_Baselines.ipynb`. Set `DATA_PATH` to the CSV directory or KIT archive if needed. With the default scientific settings the full study has 150 fits. Output is saved after each completed fit.
+2. **E10:** open `notebooks/E10_State_Feature_Families.ipynb`. For the recorded reuse path, supply the original E9 archive or extracted directory in `E9_RESULTS_PATH` and keep `REUSE_E9_ANCHORS=True`. The preflight verifies all eligible anchors; all 120 passed in the reported run. Enable full training in its Cell 11 to train the 180 new intermediates. To run without supplied anchors, set `REUSE_E9_ANCHORS=False`; all 300 records are then newly trained and are a new replication, not the recorded reuse provenance.
+3. **E11:** open `notebooks/E11_Canonical_Degree_Adjacency.ipynb`. Its reported E9 reuse gate failed, so all 210 fits were new. For a fresh full replication without anchor inputs, set `REUSE_E9_REAL=False`; otherwise supply the original E9 export and let the gate decide. The default Step 7 launches full training after preflight.
 
-### B. Capacity and preliminary topology ablation
+E9 and E11 default `RUN_FULL_EXPERIMENT=True`; E10 defaults to `False` in its full-run cell. Use the CSV verification scripts for inspection without training. The delivered notebooks are preserved byte for byte so saved source hashes remain meaningful. Their early preparation/interpretation prose is historical context, not an assertion that the completed exports are missing.
 
-`notebooks/Battery_Disassembly_Topology_Ablation_LOPO_v2.ipynb`
+For local notebook execution, disable Colab-only Drive behavior where necessary, set `DATA_PATH` and output paths explicitly, and run cells in order. No guarantee of a successful unchanged end-to-end local training run is made by this packaging check. Do not bypass reuse-gate failures to manufacture identical endpoints. Separate dependency/device signatures create separate run directories.
 
-Adds the capacity-matched MLP and the preliminary topology controls used to test whether parameter count alone explains the GNN advantage.
+## 3. Original exports and E10 provenance
 
-### C. Canonical static topology-mechanism audit
+The companion `EV_Final_Experiment_Exports.zip` contains nested archives listed in `provenance/source_archives.json`. Extract the E9 nested ZIP before pointing a notebook to it; alternatively extract it to a directory containing its `protocol.json`, `fits`, `models`, and `diagnostics`.
 
-`notebooks/Battery_Disassembly_Final_Topology_Mechanism_LOPO.ipynb`
+The original E10 archive contains 300 fit/state/model records and diagnostics but did not contain its final summary/completion files. Those were independently reconstructed and are retained as a separate `e10_verified_summaries.zip`. The repository combines their nonconflicting files for convenient inspection, and `results/principal/e10/provenance/` retains both source README files. The original archives are never silently rewritten.
 
-Compares:
+Run `python scripts/verify_original_exports.py PATH_TO_COMPANION_ZIP` to verify all source archive SHA-256 values, archive CRC integrity, per-fit metrics and available checkpoint/state hashes. Saved model files are never deserialized by this verification script. E9 did not export per-fit model checksums; its original archive hash and the packaged-file manifest establish byte identity, while E10 reused anchors carry additional E9 model/state provenance hashes.
 
-- `RealGNN`
-- `NoEdgesGNN`
-- five `ShuffledGNN` realizations
+## 4. Numerical and statistical interpretation
 
-The historical `shuffle` label means semantic–topology permutation. A battery-specific node bijection is applied to both endpoints of each physical fixation edge, preserving the complete unlabeled graph up to relabeling while semantic attributes and operation-to-node references stay at their original semantic indices.
+Average seeds and five shuffle realizations within product; then weight the ten products equally. Exact two-sided sign-flip inference enumerates 1024 product-sign assignments under a sign-exchangeability assumption. Holm correction is separate for E9's four, E10's six, and E11's two Hits@1 contrasts. Descriptive bootstrap intervals use 10000 product resamples and seed 20261003. Supporting metrics, singleton removal, progress stages and omissions are descriptive. This is not whole-study family-wise correction or proof of independent products under overlapping LOPO training folds.
 
-### D. Static input sensitivities
+The retained CPU sensitivity re-evaluated all 210 E11 checkpoints previously. It changes 376 of 143073 metric cells and preserves both principal sign-flip/Holm conclusions. Packaging verifies the retained numerical records; it does not repeat that checkpoint evaluation. Original GPU outputs remain primary. Per-state ranking metrics are included; original per-candidate GPU score vectors were not exported, so a near-tie device explanation remains an inference.
 
-`notebooks/Battery_Disassembly_No_Progress_Sensitivity_LOPO.ipynb`
+## 5. Historical supporting material
 
-Removes normalized sequence progress from the pairwise scoring head.
-
-`notebooks/Battery_Disassembly_No_Degree_Sensitivity_LOPO.ipynb`
-
-Removes the three operation-local normalized degree features derived from the recorded physical graph.
-
-Both sensitivities retrain the relevant conditions under the same LOPO folds and neural-training seeds.
-
-## 3. Extended mechanism experiments
-
-### E1 — test-time topology swap
-
-`notebooks/Battery_Disassembly_E1_Test_Time_Topology_Swap_LOPO.ipynb`
-
-Purpose: determine whether a trained graph model actually uses the graph supplied at inference.
-
-Forward intervention: a real-topology-trained model is evaluated on the recorded graph, each of the five semantic–topology permutations, and the no-edge graph with model parameters fixed.
-
-Reverse intervention: each permutation-trained model is evaluated on its matched permutation and on the recorded physical graph.
-
-Saved outputs: `results/extended/e1_test_time_swap/`.
-
-### E2 — global-context and structure-preserving controls
-
-`notebooks/E2_Global_Context_Controls.ipynb`
-
-Conditions:
-
-- real topology;
-- no-edge;
-- five semantic–topology permutations;
-- global mean-pool context without adjacency;
-- complete graph with one dummy edge type;
-- five class-preserving rewired graphs.
-
-The class-preserving rewiring retains node fixation degree, fixation-record identity/count, fixation edge type, and endpoint component-class pairing while changing exact adjacency.
-
-Saved outputs: `results/extended/e2_global_context/`.
-
-### E2b — capacity-matched mean-pool
-
-`notebooks/E2b_Capacity_Matched_MeanPool.ipynb`
-
-The context-branch width is increased from 64 to 85 so the mean-pool model is within 0.3% of the canonical GNN parameter count. The model still has no graph adjacency and no graph-branch physical degree.
-
-Saved outputs: `results/extended/e2b_capacity_matched_meanpool/`.
-
-### E3 — stronger non-graph and heuristic baselines
-
-`notebooks/E3_Strong_Baselines_and_Heuristics_LOPO.ipynb`
-
-Includes:
-
-- XGBRanker with `rank:pairwise`;
-- class-transition prior;
-- graph-distance heuristic;
-- shared-component continuation heuristic;
-- analytical uniform-random baseline.
-
-The XGBRanker uses product-invariant current/candidate operation descriptors, degree features, degree differences, categorical equality indicators, and normalized sequence progress, but no adjacency, component identity, product identity, or raw operation identifier.
-
-Saved outputs: `results/extended/e3_strong_baselines/`.
-
-### E4 — training-budget sensitivity
-
-`notebooks/E4_Training_Budget_and_Convergence_LOPO.ipynb`
-
-Real, no-edge, complete, and five permuted conditions are trained along the same trajectories and evaluated at 30, 100, and 300 epochs. The checkpoint comparison is diagnostic and is not used for retrospective epoch selection.
-
-Saved outputs: `results/extended/e4_training_budget/`.
-
-### E5 — topology-dependent positive control
-
-`notebooks/E5_Positive_Control_Topology_Benchmark_LOPO.ipynb`
-
-This benchmark retains the same products, LOPO protocol, model family, operation representation, ranking objective, and candidate sets but replaces the empirical next-operation target with a synthetic target constructed from one- and two-hop information in the true physical fixation graph.
-
-Its role is methodological: if the audit cannot favor the real graph under a target deliberately generated from the real graph, an unsupported empirical real-versus-permuted comparison would be difficult to interpret. The benchmark is not intended as a realistic disassembly policy.
-
-Saved outputs: `results/extended/e5_positive_control/`.
-
-### E6 — state-aware topology
-
-`notebooks/E6_Dynamic_State_Aware_Topology_LOPO_v2.ipynb`
-
-This is the state-aware implementation used in the manuscript.
-
-Conditions:
-
-- `DynamicReal`
-- five `DynamicShuffled` realizations
-- matched `StaticReal`
-- `DynamicComplete`
-- `DynamicNoEdge`
-
-#### State timing
-
-Ranking state `t` is post-current-operation: operation `t` is applied before candidates for `t+1` are scored.
-
-#### State update
-
-- Executed fixation: remove the corresponding modeled fixation edge.
-- Executed part operation: mark that part as removal-complete.
-- Deactivate a removal-complete part only after it has no remaining **active incident modeled fixation**. The implementation checks that an unexecuted fixation has both endpoints structurally active before it counts as remaining.
-- Retain inactive nodes in the fixed node index set as isolated semantic nodes so operation-to-node references remain stable.
-
-#### Dynamic shuffled control
-
-The same fixed node permutation is applied to the initial graph and every subsequent structural event. Operation-local semantic inputs and operation-to-node references remain at their original semantic indices. Therefore DynamicReal and DynamicShuffled have graph-isomorphic evolving structural sequences up to the fixed relabeling while differing in semantic–topological correspondence.
-
-The notebook explicitly checks equality of state active-node fractions, remaining-edge fractions, and operation-local inputs between real and shuffled conditions.
-
-#### State batching
-
-All state graphs for one battery are combined into a block-diagonal graph. Blocks are disconnected, so no message exchange occurs between ranking states; this is computational batching of statewise GNN evaluations.
-
-Saved outputs: `results/extended/e6_state_aware/`.
-
-### E9 — complementary StateAwareXGBRanker
-
-`notebooks/E9_StateAwareXGBRanker_LOPO.ipynb`
-
-The notebook reuses the fixed E3 XGBRanker hyperparameters and uses the same E6 post-current history-consistent state updates. It constructs explicit per-node state descriptors (activity, completion, remaining and executed fixation connectivity, remaining edge-type statistics), fixed-endpoint summaries and process-wide fractions. It runs 10 LOPO folds × 3 XGBoost seeds. Training uses all nonterminal remaining candidates; evaluation includes terminal singleton states. The baseline is **not architecture-controlled** against DynamicReal because the representations and learning procedures differ.
-
-The distributed notebook contains **extended all-product integrity assertions** that compare every per-node normalized remaining degree to E6 and probe whether changes to future ordering leave current-state feature rows unchanged. These assertions are executable but no passing report was supplied with the saved run archive. They should be explicitly rerun against the downloaded KIT data before final certification.
-
-Saved canonical source run: the later CUDA run in `results/extended/e9_stateaware_xgb/`. Original notebook's metadata pins the base code to commit `21b931fc3d7e05ec0ae01ad8b032016fb7706969`. Saved file aggregation gives StateAwareXGBRanker Hits@1 ≈0.422515 and DynamicReal − StateAwareXGBRanker ≈−0.032222 (product-level two-sided exact sign-flip p=0.021484375). The comparison is analyzed separately from the four designated E6 GNN contrasts.
-
-Use `python scripts/check_stateaware_xgb.py` to independently check the saved E9 CSVs and match the stored E6 DynamicReal per-product results. **This verifies arithmetic and file completeness only.**
-
-### E8 — same-manufacturer exclusion
-
-`notebooks/E8_same_manufacturer_exclusion_dynamic_topology.ipynb`
-
-Affected held-out products:
-
-- Chevrolet Spark
-- Chevrolet Volt
-- BMW 530e
-- BMW 330e
-- BMW i3
-
-When a BMW product is held out, all other BMW products are excluded from training. When a Chevrolet product is held out, the other Chevrolet product is excluded. Only DynamicReal and five DynamicShuffled realizations are rerun.
-
-Because this analysis has only five independent held-out products, the minimum attainable two-sided exact sign-flip value for five nonzero same-direction differences is 0.0625. The manuscript therefore treats E8 descriptively.
-
-Saved outputs: `results/extended/e8_manufacturer_exclusion/`.
-
-## 4. Fixed randomization and canonical training configuration
-
-Neural-training seeds: `17, 29, 43`.
-
-Topology-permutation IDs: `1, 2, 3, 4, 5`.
-
-For permutation ID `r` and battery ID `b`, the canonical permutation-generator seed is:
-
-`20261119 + 10007*r + b`
-
-Permutation generation is independent of the neural-training seed. The same battery/permutation assignment is reused across the three neural-training seeds.
-
-Canonical neural settings:
-
-- 30 epochs;
-- AdamW;
-- learning rate `2e-3`;
-- weight decay `1e-4`;
-- dropout `0.10`;
-- eight sampled negatives per training state;
-- one optimizer update per training battery per epoch;
-- no early stopping or held-out-product model selection.
-
-In ordinary nine-product LOPO folds, 30 epochs correspond to 270 product-level optimizer updates.
-
-## 5. Evaluation
-
-At each held-out decision state, all operations appearing later in the recorded reference sequence are scored. The metrics are Hits@1, Hits@3, and mean reciprocal rank (MRR), with Hits@1 treated as the primary endpoint.
-
-Scores within `1e-8` are treated as tied. Metrics use expected values under uniform random ordering within a tied score group, preventing storage order from determining performance.
-
-The final decision state has a single remaining candidate and is included in the primary evaluation. A deterministic sensitivity analysis removes its contribution without retraining.
-
-### Analytical uniform-random expectation
-
-For `n` candidates:
-
-- Hits@1: `1/n`
-- Hits@3: `min(3,n)/n`
-- MRR: `H_n/n`
-
-where `H_n` is the `n`th harmonic number. The values are averaged within held-out product and then equally across products, matching the model aggregation.
-
-## 6. Statistical analysis
-
-Neural-training seeds are averaged within held-out product. Repeated graph controls (permutations, dynamic shuffles, rewiring realizations) are also averaged within product before product-level inference.
-
-For designated product-level contrasts:
-
-- mean paired product difference is reported;
-- 20,000-replicate percentile bootstrap intervals summarize product-level uncertainty descriptively;
-- inference uses an exact two-sided paired sign-flip test;
-- Holm adjustment is applied within the designated Hits@1 family for each principal controlled experiment.
-
-For `n=10`, all `2^10 = 1024` sign assignments are enumerated. Seeds and graph realizations are not inferential units.
-
-The manuscript does not interpret an unsupported comparison as evidence of equivalence. In particular, the static real-versus-permuted result does not establish permutation superiority.
-
-## 7. Matched reruns
-
-Several extended diagnostics retrain a named canonical condition to provide a matched within-experiment comparison. Small numerical differences between repeated labels such as `RealGNN` across the canonical, E2, and E4 pipelines are therefore expected.
-
-The formal DynamicReal-versus-StaticReal comparison uses the `StaticReal` condition rerun inside the E6 state-batched pipeline. It should not be replaced by the numerically separate canonical static result.
-
-## 8. Result locations
-
-See `results/README.md` for a file-by-file index. The main extended output directories are:
-
-- `results/extended/e1_test_time_swap/`
-- `results/extended/e2_global_context/`
-- `results/extended/e2b_capacity_matched_meanpool/`
-- `results/extended/e3_strong_baselines/`
-- `results/extended/e4_training_budget/`
-- `results/extended/e5_positive_control/`
-- `results/extended/e6_state_aware/`
-- `results/extended/e8_manufacturer_exclusion/`
-
-## 9. Recomputing/checking summaries
-
-Original canonical and no-progress statistics:
-
-```bash
-python scripts/recompute_statistics.py
-```
-
-Compact consistency check for saved extended-experiment aggregates and contrasts:
-
-```bash
-python scripts/check_extended_results.py
-```
-
-E9 result verification (no training):
-
-```bash
-python scripts/check_stateaware_xgb.py
-```
-
-The notebook dataset finder defaults to `/content` for Google Colab. To run locally, configure the dataset search path; the external KIT dataset must be downloaded separately.
-
-## 10. Interpretation boundary
-
-The E6 graph is history-consistent with the observed reference prefix but is not a complete measured physical process state. The experiment does not establish closed-loop robotic feasibility, accessibility, collision-free execution, tooling availability, safety compliance, or optimal disassembly planning.
+Use `python scripts/historical/recompute_statistics.py`, `python scripts/historical/check_extended_results.py`, and `python scripts/historical/check_stateaware_xgb.py` for older saved outputs. Their paths were adapted to `results/historical/`; their numerical logic was preserved. The historical XGB-only notebook labelled E9 maps to Supplementary S11.1 and must not be used as the principal E9 endpoint. Historical E6 shuffling jointly changes degree/state-event correspondence; it is not E11's canonical-degree-conditioned control.

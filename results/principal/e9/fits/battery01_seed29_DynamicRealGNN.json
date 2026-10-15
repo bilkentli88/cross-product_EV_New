@@ -1,0 +1,14 @@
+{
+  "protocol_signature": "ddc68c2037aa04f99b6bc402683dc44baa9702faff1c456b033998641e072acd",
+  "battery_id": 1,
+  "battery": "Fiat 500e",
+  "seed": 29,
+  "condition": "DynamicRealGNN",
+  "n_states": 374,
+  "runtime_seconds": 13.635985374450684,
+  "device": "cuda",
+  "hits1": 0.3883652085361732,
+  "hits3": 0.5380902780149367,
+  "mrr": 0.49309057186580835,
+  "parameter_count": 45737
+}

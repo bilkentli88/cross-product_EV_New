@@ -1,0 +1,7 @@
+{
+  "requested": true,
+  "eligible": true,
+  "checked_fits": 120,
+  "reason": "All 120 anchors passed numerical and procedural checks.",
+  "new_full_budget": 180
+}

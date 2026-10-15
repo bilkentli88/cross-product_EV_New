@@ -1,0 +1,9 @@
+-r requirements.txt
+torch
+scipy
+scikit-learn>=1.2
+xgboost>=2,<4
+packaging
+ipython
+jupyter
+ipykernel

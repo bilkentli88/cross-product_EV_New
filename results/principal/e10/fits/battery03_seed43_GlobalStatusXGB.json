@@ -1,0 +1,19 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 3,
+  "battery": "Hyundai IONIQ 5",
+  "seed": 43,
+  "condition": "GlobalStatusXGB",
+  "variant": "GlobalStatus",
+  "n_states": 386,
+  "hits1": 0.4231640716058699,
+  "hits3": 0.5920310749212366,
+  "mrr": 0.5302682243370961,
+  "training_rows": 226237,
+  "feature_count": 343,
+  "runtime_seconds": 25.356959104537964,
+  "device": "cuda",
+  "origin": "New E10 training",
+  "model_sha256": "9565483748e21e2f1db539a6b9b0d6015c28d01c1ef387895418c47e06513527",
+  "states_sha256": "d530ca3358f21a4a87a8362ef8dd60ac1036c47490d63d005ce235ae0f248d94"
+}

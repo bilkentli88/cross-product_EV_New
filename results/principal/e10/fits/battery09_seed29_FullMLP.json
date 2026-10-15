@@ -1,0 +1,149 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 9,
+  "battery": "Mitsubishi Outlander",
+  "seed": 29,
+  "condition": "FullMLP",
+  "variant": "Full",
+  "n_states": 182,
+  "hits1": 0.3922258064842106,
+  "hits3": 0.5903351902532599,
+  "mrr": 0.5294789381315959,
+  "device": "cuda",
+  "width": 85,
+  "parameter_count": 46085,
+  "gnn_parameter_count": 45665,
+  "capacity_gap_fraction": 0.00919741596408628,
+  "loss_curve": [
+    {
+      "epoch": 1,
+      "loss": 0.6155088875028822
+    },
+    {
+      "epoch": 2,
+      "loss": 0.3985895812511444
+    },
+    {
+      "epoch": 3,
+      "loss": 0.29097705086072284
+    },
+    {
+      "epoch": 4,
+      "loss": 0.24411407940917546
+    },
+    {
+      "epoch": 5,
+      "loss": 0.21375711924499935
+    },
+    {
+      "epoch": 6,
+      "loss": 0.18895862831009758
+    },
+    {
+      "epoch": 7,
+      "loss": 0.17148318224483067
+    },
+    {
+      "epoch": 8,
+      "loss": 0.16434170140160453
+    },
+    {
+      "epoch": 9,
+      "loss": 0.1472946438524458
+    },
+    {
+      "epoch": 10,
+      "loss": 0.13648481170336405
+    },
+    {
+      "epoch": 11,
+      "loss": 0.12318337129222022
+    },
+    {
+      "epoch": 12,
+      "loss": 0.11782111475865047
+    },
+    {
+      "epoch": 13,
+      "loss": 0.11145868649085362
+    },
+    {
+      "epoch": 14,
+      "loss": 0.11038923097981347
+    },
+    {
+      "epoch": 15,
+      "loss": 0.10940951688422097
+    },
+    {
+      "epoch": 16,
+      "loss": 0.10916720413499409
+    },
+    {
+      "epoch": 17,
+      "loss": 0.10353848006990221
+    },
+    {
+      "epoch": 18,
+      "loss": 0.10156821542316014
+    },
+    {
+      "epoch": 19,
+      "loss": 0.09968610025114483
+    },
+    {
+      "epoch": 20,
+      "loss": 0.09755828728278478
+    },
+    {
+      "epoch": 21,
+      "loss": 0.1008742211593522
+    },
+    {
+      "epoch": 22,
+      "loss": 0.09921791487269932
+    },
+    {
+      "epoch": 23,
+      "loss": 0.09906972199678421
+    },
+    {
+      "epoch": 24,
+      "loss": 0.09704477588335673
+    },
+    {
+      "epoch": 25,
+      "loss": 0.09660928530825509
+    },
+    {
+      "epoch": 26,
+      "loss": 0.09336317744519976
+    },
+    {
+      "epoch": 27,
+      "loss": 0.08896369238694508
+    },
+    {
+      "epoch": 28,
+      "loss": 0.09032002174192005
+    },
+    {
+      "epoch": 29,
+      "loss": 0.087701049943765
+    },
+    {
+      "epoch": 30,
+      "loss": 0.09163068648841646
+    }
+  ],
+  "e9_training_runtime_seconds": 4.71421480178833,
+  "origin": "Verified E9 anchor; no new training",
+  "e9_provenance": {
+    "record_sha256": "01060b9304ffda710a0374db063d92c654c78fd4c24a35bec48d8f004a51e9d1",
+    "states_sha256": "fab7350b44b9f830a838d07630f9a57683972ea060bfcdee25cfefb5f1c7b9fa",
+    "model_sha256": "0679a352b85401c950738004687a5161065de01a87260357055036c8a9f0f7a2",
+    "original_condition": "StateAwareMLP"
+  },
+  "model_sha256": "0679a352b85401c950738004687a5161065de01a87260357055036c8a9f0f7a2",
+  "states_sha256": "015621ae1ccf818746882e54faded9c7dc1bd5ca7096c5b2568924c41d92ebc9"
+}

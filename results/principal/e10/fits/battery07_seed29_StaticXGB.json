@@ -1,0 +1,25 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 7,
+  "battery": "BMW 330e",
+  "seed": 29,
+  "condition": "StaticXGB",
+  "variant": "Static",
+  "n_states": 130,
+  "hits1": 0.36563470225311256,
+  "hits3": 0.5943400041952351,
+  "mrr": 0.5105099597739796,
+  "device": "cuda",
+  "training_rows": 292413,
+  "feature_count": 351,
+  "e9_training_runtime_seconds": 30.78333020210266,
+  "origin": "Verified E9 anchor; no new training",
+  "e9_provenance": {
+    "record_sha256": "50b16160232d463afd73c3116079fbc111734bd1d0907bb5319a9f3e625766d3",
+    "states_sha256": "206f70c073c37489f9859c8860b0b65cce7d8e903aeb8942078770630e6de29a",
+    "model_sha256": "e31dfd2456acafb142673cbebd072c196e5718f2cf954088f9fe5013003cfcf7",
+    "original_condition": "StaticFeatureXGB"
+  },
+  "model_sha256": "e31dfd2456acafb142673cbebd072c196e5718f2cf954088f9fe5013003cfcf7",
+  "states_sha256": "e7ad73bc50e4c55d4d595df5141785d0636d826c239aa2d62e137ef6331e9040"
+}

@@ -1,0 +1,25 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 1,
+  "battery": "Fiat 500e",
+  "seed": 29,
+  "condition": "FullXGB",
+  "variant": "Full",
+  "n_states": 374,
+  "hits1": 0.4316039094360093,
+  "hits3": 0.5872401480760198,
+  "mrr": 0.5316564421954498,
+  "device": "cuda",
+  "training_rows": 230803,
+  "feature_count": 345,
+  "e9_training_runtime_seconds": 26.171449422836304,
+  "origin": "Verified E9 anchor; no new training",
+  "e9_provenance": {
+    "record_sha256": "5240a29a24614e4fbf3abc815c32a20018226a32c7efbf51b3e3aa0b64e99b58",
+    "states_sha256": "0bce7a5e7a913b9af63cd6b89f219093896976cb7581fdc883c82e8d190d8dae",
+    "model_sha256": "051da2d46d6c6d331310d429aeda7f2c88e644f6a476b9664bf141a1a6c37caf",
+    "original_condition": "StateAwareXGB"
+  },
+  "model_sha256": "051da2d46d6c6d331310d429aeda7f2c88e644f6a476b9664bf141a1a6c37caf",
+  "states_sha256": "f90a52e7a6baebd62dd6ab27a52f19e989abeea497efe420b47cc1569d72d6a5"
+}

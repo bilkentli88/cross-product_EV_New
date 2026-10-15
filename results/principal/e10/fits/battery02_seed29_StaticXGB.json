@@ -1,0 +1,25 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 2,
+  "battery": "Chevrolet Spark",
+  "seed": 29,
+  "condition": "StaticXGB",
+  "variant": "Static",
+  "n_states": 167,
+  "hits1": 0.39949895892204595,
+  "hits3": 0.6582274156882935,
+  "mrr": 0.5543422962402486,
+  "device": "cuda",
+  "training_rows": 286900,
+  "feature_count": 345,
+  "e9_training_runtime_seconds": 30.92813205718994,
+  "origin": "Verified E9 anchor; no new training",
+  "e9_provenance": {
+    "record_sha256": "6a4bbdaca73e049952a88280a7b4f72dc96ca0826b75d187a743bfa0e51855f6",
+    "states_sha256": "d92ec9aee4d457843d1f0cc7e3d1d4fbb01299a6da93b1293fc6eadff8d1bb0d",
+    "model_sha256": "3b23f95148ba79f8efbe8f6a93f365c2821c722a2665b93170f2f88c0d09ed06",
+    "original_condition": "StaticFeatureXGB"
+  },
+  "model_sha256": "3b23f95148ba79f8efbe8f6a93f365c2821c722a2665b93170f2f88c0d09ed06",
+  "states_sha256": "8f2c19f4be8e74f52cb4cb69055cb253903668bcb0a8ec54147f55cb1d09d59a"
+}

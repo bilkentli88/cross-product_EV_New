@@ -1,0 +1,149 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 3,
+  "battery": "Hyundai IONIQ 5",
+  "seed": 17,
+  "condition": "FullMLP",
+  "variant": "Full",
+  "n_states": 386,
+  "hits1": 0.3296191665972343,
+  "hits3": 0.4680889332977479,
+  "mrr": 0.4270683229852847,
+  "device": "cuda",
+  "width": 85,
+  "parameter_count": 46109,
+  "gnn_parameter_count": 45725,
+  "capacity_gap_fraction": 0.00839803171131766,
+  "loss_curve": [
+    {
+      "epoch": 1,
+      "loss": 0.5994991991255019
+    },
+    {
+      "epoch": 2,
+      "loss": 0.3867468602127499
+    },
+    {
+      "epoch": 3,
+      "loss": 0.3173998362488217
+    },
+    {
+      "epoch": 4,
+      "loss": 0.2656596667236752
+    },
+    {
+      "epoch": 5,
+      "loss": 0.22850093907780117
+    },
+    {
+      "epoch": 6,
+      "loss": 0.1955421401394738
+    },
+    {
+      "epoch": 7,
+      "loss": 0.1721620543135537
+    },
+    {
+      "epoch": 8,
+      "loss": 0.15723338060908848
+    },
+    {
+      "epoch": 9,
+      "loss": 0.14393594364325205
+    },
+    {
+      "epoch": 10,
+      "loss": 0.12697529130511814
+    },
+    {
+      "epoch": 11,
+      "loss": 0.1331206891271803
+    },
+    {
+      "epoch": 12,
+      "loss": 0.12592456158664492
+    },
+    {
+      "epoch": 13,
+      "loss": 0.11880206233925289
+    },
+    {
+      "epoch": 14,
+      "loss": 0.12155057489871979
+    },
+    {
+      "epoch": 15,
+      "loss": 0.12295254402690464
+    },
+    {
+      "epoch": 16,
+      "loss": 0.1164383590221405
+    },
+    {
+      "epoch": 17,
+      "loss": 0.10992303904559877
+    },
+    {
+      "epoch": 18,
+      "loss": 0.11228183408578236
+    },
+    {
+      "epoch": 19,
+      "loss": 0.1108497968978352
+    },
+    {
+      "epoch": 20,
+      "loss": 0.10674047635661231
+    },
+    {
+      "epoch": 21,
+      "loss": 0.10199337701002757
+    },
+    {
+      "epoch": 22,
+      "loss": 0.1045641228556633
+    },
+    {
+      "epoch": 23,
+      "loss": 0.09712680677572887
+    },
+    {
+      "epoch": 24,
+      "loss": 0.0960112280315823
+    },
+    {
+      "epoch": 25,
+      "loss": 0.10033020294374889
+    },
+    {
+      "epoch": 26,
+      "loss": 0.09737019903130001
+    },
+    {
+      "epoch": 27,
+      "loss": 0.10051785740587446
+    },
+    {
+      "epoch": 28,
+      "loss": 0.10247855302360323
+    },
+    {
+      "epoch": 29,
+      "loss": 0.10385010805394915
+    },
+    {
+      "epoch": 30,
+      "loss": 0.10799424515830146
+    }
+  ],
+  "e9_training_runtime_seconds": 5.1570143699646,
+  "origin": "Verified E9 anchor; no new training",
+  "e9_provenance": {
+    "record_sha256": "d1ce36fe0e234b8ad9dfe1ea25f26006da29681dd4230df0b3694edcdb3e2501",
+    "states_sha256": "cd4a008ad8c94e44a5f3c3339dfaca68128f8597ec9dfb88bcf443b7403392da",
+    "model_sha256": "cf71c8a42ecd8498dfa9d783c3f542047b121e3d1e9b240a8b2fd4d53827008f",
+    "original_condition": "StateAwareMLP"
+  },
+  "model_sha256": "cf71c8a42ecd8498dfa9d783c3f542047b121e3d1e9b240a8b2fd4d53827008f",
+  "states_sha256": "21136777894f3bb19d45d1c8ab4311155ad306ab156c27d851658376e2c16331"
+}

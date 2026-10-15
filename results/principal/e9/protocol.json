@@ -1,0 +1,54 @@
+{
+  "experiment": "E9 state-aware non-graph baselines",
+  "feature_version": "E9-state-scalars-v1.0",
+  "implementation_sha256": "881566fa41124575a6d5ed0f99cb08b518548b4746e32e87e34249164c4f4483",
+  "source_e6_sha256": "90c01dc01b2eccfb9e592de3ba649c7017a52086d7ee23260db992cb47d48d81",
+  "dataset_sha256": {
+    "battery_catalogue.csv": "a1de7eadff569c511f8aeabf1fa7013bc249f4ad450a7f9bf6a09ca1710371b3",
+    "parts.csv": "3ceaba9d186dcc7342499e3ccf432a07c78b75dbd4cc732c0b43a92aa140c790",
+    "fixations.csv": "5bc454a59509275b199828fc7376d28507046bffd28c3f4ec23f076d8bd52339",
+    "operations.csv": "8cfad668c5b87765dc4de044d72c8b8ce439d67740506a422e4597dc4fc4ba05"
+  },
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "epochs": 30,
+  "negative_samples": 8,
+  "learning_rate": 0.002,
+  "weight_decay": 0.0001,
+  "dropout": 0.1,
+  "xgb_trees": 250,
+  "conditions": [
+    "StaticFeatureMLP",
+    "StateAwareMLP",
+    "StaticFeatureXGB",
+    "StateAwareXGB",
+    "DynamicRealGNN"
+  ],
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "torch_version": "2.11.0+cu130",
+  "xgboost_version": "3.4.1",
+  "sklearn_version": "1.6.1",
+  "numpy_version": "2.1.3",
+  "deterministic_torch": true,
+  "tf32_matmul": false,
+  "evaluation_batching": "Canonical internal batching; shuffled candidate metrics; E6 tie tolerance 1e-8",
+  "independent_unit": "held-out battery product",
+  "state_rule": "Exact E6 post-current update; all original fixation classes retained",
+  "mlp_capacity": "Width chosen by parameter-count gap only; shared by static/state models",
+  "xgb_budget": "E3 250-tree settings; all nonsingleton training candidates, CPU hist",
+  "notes": "No ID/order input, no test tuning; historic E6 is descriptive only"
+}

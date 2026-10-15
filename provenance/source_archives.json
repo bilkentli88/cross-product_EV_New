@@ -1,0 +1,38 @@
+[
+  {
+    "study": "e9",
+    "file_name": "e9_state_aware_baselines_results.zip",
+    "sha256": "b8b0f1e5bc87104169d6fbc4449a5c0d517dc3c45867e318ec466efbc47a3ca3",
+    "size_bytes": 32556887,
+    "members": 473,
+    "uncompressed_bytes": 65237410,
+    "description": "Unmodified original experiment export."
+  },
+  {
+    "study": "e10",
+    "file_name": "e10_original_fit_exports.zip",
+    "sha256": "267b56dec4595bb3ed85e01e3471342eca842c855ec972f7629a8a4335096779",
+    "size_bytes": 68612167,
+    "members": 916,
+    "uncompressed_bytes": 149750887,
+    "description": "Unmodified original experiment export."
+  },
+  {
+    "study": "e10_verified",
+    "file_name": "e10_verified_summaries.zip",
+    "sha256": "17d6212ff797dd2b76817d8b0b9aab81aaff8f71cf938518a6e7584f192fc822",
+    "size_bytes": 64446,
+    "members": 13,
+    "uncompressed_bytes": 176644,
+    "description": "Independently verified E10 summaries; separate from the original fit export."
+  },
+  {
+    "study": "e11",
+    "file_name": "e11_canonical_degree_adjacency_results.zip",
+    "sha256": "607c217c66721a1bc57f15f86297c6edd69fec16a814eeaeaf3645ba5fe4663a",
+    "size_bytes": 38189424,
+    "members": 656,
+    "uncompressed_bytes": 44058014,
+    "description": "Unmodified original experiment export."
+  }
+]

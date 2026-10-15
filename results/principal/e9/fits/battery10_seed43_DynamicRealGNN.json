@@ -1,0 +1,14 @@
+{
+  "protocol_signature": "ddc68c2037aa04f99b6bc402683dc44baa9702faff1c456b033998641e072acd",
+  "battery_id": 10,
+  "battery": "BMW i3",
+  "seed": 43,
+  "condition": "DynamicRealGNN",
+  "n_states": 172,
+  "runtime_seconds": 12.098050117492676,
+  "device": "cuda",
+  "hits1": 0.4059357083809486,
+  "hits3": 0.5797257297940087,
+  "mrr": 0.5249386187966919,
+  "parameter_count": 45761
+}

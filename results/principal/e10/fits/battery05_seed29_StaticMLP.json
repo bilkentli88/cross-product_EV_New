@@ -1,0 +1,149 @@
+{
+  "protocol_signature": "723fe59a6bf6534399c64be5ae344e59f163991f7b75b5775898e4d2189c7eaa",
+  "battery_id": 5,
+  "battery": "Chevrolet Volt",
+  "seed": 29,
+  "condition": "StaticMLP",
+  "variant": "Static",
+  "n_states": 166,
+  "hits1": 0.3913628064063935,
+  "hits3": 0.6258956481348429,
+  "mrr": 0.540423574786616,
+  "device": "cuda",
+  "width": 85,
+  "parameter_count": 46121,
+  "gnn_parameter_count": 45737,
+  "capacity_gap_fraction": 0.008395828322802107,
+  "loss_curve": [
+    {
+      "epoch": 1,
+      "loss": 0.6147822671466403
+    },
+    {
+      "epoch": 2,
+      "loss": 0.38844627141952515
+    },
+    {
+      "epoch": 3,
+      "loss": 0.2959652543067932
+    },
+    {
+      "epoch": 4,
+      "loss": 0.24604828159014383
+    },
+    {
+      "epoch": 5,
+      "loss": 0.21806876195801628
+    },
+    {
+      "epoch": 6,
+      "loss": 0.1956881582736969
+    },
+    {
+      "epoch": 7,
+      "loss": 0.18594939178890652
+    },
+    {
+      "epoch": 8,
+      "loss": 0.1727562877866957
+    },
+    {
+      "epoch": 9,
+      "loss": 0.1657091048028734
+    },
+    {
+      "epoch": 10,
+      "loss": 0.1538832253879971
+    },
+    {
+      "epoch": 11,
+      "loss": 0.15316539837254417
+    },
+    {
+      "epoch": 12,
+      "loss": 0.14444234470526376
+    },
+    {
+      "epoch": 13,
+      "loss": 0.13951676421695286
+    },
+    {
+      "epoch": 14,
+      "loss": 0.13973533362150192
+    },
+    {
+      "epoch": 15,
+      "loss": 0.13388218813472325
+    },
+    {
+      "epoch": 16,
+      "loss": 0.13496476080682543
+    },
+    {
+      "epoch": 17,
+      "loss": 0.12446294559372796
+    },
+    {
+      "epoch": 18,
+      "loss": 0.12305253826909596
+    },
+    {
+      "epoch": 19,
+      "loss": 0.1227269255452686
+    },
+    {
+      "epoch": 20,
+      "loss": 0.11522744678788716
+    },
+    {
+      "epoch": 21,
+      "loss": 0.11779263532823986
+    },
+    {
+      "epoch": 22,
+      "loss": 0.12018194794654846
+    },
+    {
+      "epoch": 23,
+      "loss": 0.1153099967373742
+    },
+    {
+      "epoch": 24,
+      "loss": 0.11321550028191672
+    },
+    {
+      "epoch": 25,
+      "loss": 0.11239028722047806
+    },
+    {
+      "epoch": 26,
+      "loss": 0.11250120898087819
+    },
+    {
+      "epoch": 27,
+      "loss": 0.11349303358130985
+    },
+    {
+      "epoch": 28,
+      "loss": 0.1098947814769215
+    },
+    {
+      "epoch": 29,
+      "loss": 0.10863500667942895
+    },
+    {
+      "epoch": 30,
+      "loss": 0.105685336722268
+    }
+  ],
+  "e9_training_runtime_seconds": 4.5988359451293945,
+  "origin": "Verified E9 anchor; no new training",
+  "e9_provenance": {
+    "record_sha256": "3e3b6de03c48d5d7dba7fd7e3ea1078be4d14532db84f043d227e18a51d05f4f",
+    "states_sha256": "1cc49215cae513a958f7cb0fa66bd574fe933f5ee5f135b35435e7e816bd2590",
+    "model_sha256": "b1a7d1e660c1b735ddbee72cf66bb279cb8ef5995d9b3fa54882384275491c8d",
+    "original_condition": "StaticFeatureMLP"
+  },
+  "model_sha256": "b1a7d1e660c1b735ddbee72cf66bb279cb8ef5995d9b3fa54882384275491c8d",
+  "states_sha256": "86e0e5cd548be2d670de2b0baff28ef307aa13fad6446b8af7ce238deca71c5a"
+}
