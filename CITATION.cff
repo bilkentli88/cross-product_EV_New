@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "Please cite the accompanying article and this repository when using these materials."
-title: "Physical Topology and Process State in Cross-Product EV Battery Disassembly Ranking: A Controlled Representation Audit"
+title: "Evaluating Process-State Representations for Cross-Product EV Battery Disassembly Ranking"
 type: software
 authors:
   - family-names: "Altay"
